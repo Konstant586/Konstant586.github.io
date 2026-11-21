@@ -254,6 +254,86 @@ nav.tabs button.on svg{color:var(--brown)}
 .progress i{background:linear-gradient(90deg,#36A877,#2A8C7F)}
 details.fold>summary .ic{background:var(--cream)}
 .player{border:1px solid #CFEBDB}
+
+.sndrow{display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+.sndbtn{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-weight:700;font-size:.86rem;color:var(--muted);cursor:pointer}
+.sndbtn.on{border-color:#A9DDBF;background:var(--cream);color:var(--deep)}
+.player.flash{animation:flash .7s ease}
+@keyframes flash{0%{background:#BFE8D0;transform:scale(1.02)}100%{background:var(--soft);transform:none}}
+.player .pc{font-variant-numeric:tabular-nums}
+
+.entry{padding:12px 0}
+.entry>b{display:block;margin-bottom:6px;font-family:Inter,sans-serif;font-weight:800;font-size:.95rem}
+.jrow{display:flex;gap:10px;align-items:flex-start;margin:6px 0;line-height:1.45}
+.jlab{flex:none;min-width:108px;background:#E4F2EA;color:#2F6B52;font-weight:700;font-size:.8rem;border-radius:8px;padding:3px 8px;text-align:center;margin-top:1px}
+.seg.atab{margin-bottom:14px;padding:5px;background:#E2EAE5}
+.seg.atab button{padding:12px 6px;font-size:1rem;font-weight:800}
+.seg.atab{align-items:center}
+.seg.atab .swap{flex:none;width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:1.15rem;font-weight:800;color:var(--brown);box-shadow:var(--shadow);cursor:pointer;margin:0 -6px;z-index:1;user-select:none}
+.ex{transition:background .3s}
+.ex.cur{border-radius:12px;background:#E6F4EC;padding-left:8px;padding-right:8px;margin:0 -8px;border-bottom-color:transparent}
+.ex.cur .no{background:#7DBF9C;color:#fff}
+.ex.cur .bd b{color:var(--deep)}
+.ex.done .no{background:#D3E9DC;color:#2F6B52}
+.ex.done .bd b,.ex.done .bd span{opacity:.55}
+
+/* ===== Icons & Animation ===== */
+.ico{width:22px;height:22px;display:block}
+.ico.sm{width:19px;height:19px;display:inline-block;vertical-align:-4px;margin-right:7px}
+details.fold>summary .ic{background:linear-gradient(145deg,#E8F6EE,#CFEBDB);color:var(--deep);transition:background .3s,color .3s,transform .3s;box-shadow:inset 0 0 0 1px rgba(47,148,104,.12)}
+details.fold[open]>summary .ic{background:linear-gradient(145deg,#36A877,#2A8C7F);color:#fff;animation:icpop .45s cubic-bezier(.34,1.56,.64,1)}
+details.fold[open]>summary .ic .ico[data-k=reset],details.fold[open]>summary .ic .ico[data-k=momentum]{animation:icspin .7s ease}
+details.fold[open]>summary .ic .ico[data-k=nerv]{animation:icflash .8s ease}
+details.fold[open]>summary .ic .ico[data-k=big],details.fold[open]>summary .ic .ico[data-k=fokus],details.fold[open]>summary .ic .ico[data-k=atem]{animation:icpulse 1.6s ease-in-out infinite}
+details.fold>summary:active .ic{transform:scale(.92)}
+@keyframes icpop{0%{transform:scale(.8)}100%{transform:scale(1)}}
+@keyframes icspin{from{transform:rotate(-180deg)}to{transform:none}}
+@keyframes icflash{0%,40%,80%{opacity:1}20%,60%{opacity:.3}}
+@keyframes icpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.moment .mt2{display:inline-flex;align-items:center;gap:6px}
+.moment .mt2 .ico{width:17px;height:17px}
+.view.on details.fold,.view.on .moment{animation:rise .45s ease both}
+.view.on details.fold:nth-child(2){animation-delay:.03s}.view.on details.fold:nth-child(3){animation-delay:.06s}.view.on details.fold:nth-child(4){animation-delay:.09s}.view.on details.fold:nth-child(5){animation-delay:.12s}.view.on details.fold:nth-child(6){animation-delay:.15s}.view.on details.fold:nth-child(n+7){animation-delay:.18s}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.ico,details.fold,.moment,.ic{animation:none!important}}
+.moment .ms{flex:1;min-width:0}
+.moment .mt2{flex:none;max-width:62%;white-space:normal;text-align:right;justify-content:flex-end}
+.mpsec{margin-top:12px}
+.mpsec .tag{margin:0 0 6px}
+.mpev{font-weight:700;font-size:1.02rem}
+.mpsec .cue{text-align:left;margin:0;font-size:2.2rem}
+.mprow{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);font-size:1rem;line-height:1.45}
+.mprow:last-child{border-bottom:none}
+.mpn{flex:none;width:26px;height:26px;border-radius:50%;background:#7DBF9C;color:#fff;font-weight:800;font-size:.85rem;display:grid;place-items:center;margin-top:1px}
+.mpwd .mpn{background:#E4F2EA;color:#2F6B52}
+.bcol{flex:1;height:100%;display:flex;align-items:flex-end;border:none;background:none;padding:0;cursor:pointer;border-radius:8px}
+.bcol .bar{width:100%}
+.bcol.sel .bar{outline:2.5px solid var(--deep);outline-offset:2px}
+.barlbl span.sel{color:var(--deep);font-weight:800}
+.daycard{margin-top:14px;padding:14px;background:var(--soft);border-radius:14px;border:1px solid #CFEBDB}
+.dayt{font-weight:800;font-size:1rem}
+.daymood{display:flex;align-items:center;gap:8px;margin:8px 0 4px;font-weight:700}
+.daymood i{width:16px;height:16px;border-radius:50%;display:inline-block}
+
+/* ===== Startbildschirm ===== */
+.sptag{color:var(--brown)}
+.start{position:fixed;inset:0;z-index:60;display:none;background:linear-gradient(160deg,#1E3A33 0%,#2C5B4B 55%,#3F8068 100%);color:#fff;overflow-y:auto}
+.start.on{display:block}
+.start.out{animation:stout .45s ease forwards}
+@keyframes stout{to{opacity:0;transform:scale(1.04)}}
+.st-in{max-width:520px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 36px) 20px calc(env(safe-area-inset-bottom) + 30px);text-align:center}
+.st-cow{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid #6FD3A2;box-shadow:0 0 0 8px rgba(111,211,162,.18);animation:cowbob 3s ease-in-out infinite}
+@keyframes cowbob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-6px) rotate(2deg)}}
+.st-h{font-family:var(--head);font-size:2.3rem;text-transform:uppercase;margin:18px 0 4px;letter-spacing:.02em}
+.st-p{margin:0 0 22px;font-size:1.1rem;color:#BFE8D0;font-weight:600}
+.st-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.st-tile{border:none;border-radius:18px;background:rgba(255,255,255,.96);color:var(--deep);padding:18px 6px 14px;display:flex;flex-direction:column;align-items:center;gap:10px;font-weight:800;font-size:.92rem;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.18);opacity:0;animation:tilein .45s cubic-bezier(.34,1.56,.64,1) forwards;transition:transform .15s}
+.st-tile:active{transform:scale(.94)}
+.st-tile .ico{width:38px;height:38px;color:var(--brown)}
+@keyframes tilein{from{opacity:0;transform:translateY(16px) scale(.9)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.st-cow,.st-tile{animation:none;opacity:1}}
+.bars{gap:8px}
+.barlbl{gap:8px}
 </style>
 </head>
 <body>
@@ -262,7 +342,7 @@ details.fold>summary .ic{background:var(--cream)}
     <img class="avatar" alt="Mummi" src="data:image/jpeg;base64,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" >
     <div class="who">
       <h1 id="cowName">Mummi</h1>
-      <p>deine Mentorin · <span id="todayLbl"></span></p>
+      <p><b class="spname sptag">Tennis</b> · <span id="todayLbl"></span></p>
     </div>
     <button class="iconbtn" id="openSettings" aria-label="Einstellungen">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
@@ -278,7 +358,6 @@ details.fold>summary .ic{background:var(--cream)}
 
     <div class="card" id="checkinCard">
       <h2>Wie geht's dir gerade?</h2>
-      <p class="sub">Ehrlich reicht. Es gibt keine falsche Antwort.</p>
       <div class="moods" id="moods"></div>
       <div id="checkinMore" style="display:none">
         <p class="sub mt" id="checkinAsk" style="margin-bottom:6px;color:var(--ink);font-weight:700">Hey, wie war dein Tag?</p>
@@ -289,10 +368,11 @@ details.fold>summary .ic{background:var(--cream)}
     </div>
 
     <div class="card">
-      <h2>Deine letzten 14 Tage</h2>
-      <p class="sub"><b id="stStreak">0</b> Tage in Folge eingecheckt</p>
+      <h2>Deine letzten 10 Tage</h2>
+      <p class="sub"><b id="stStreak">0</b> <span id="stStreakL">Tage</span> in Folge eingecheckt · Tag antippen für Details</p>
       <div class="bars" id="bars"></div>
       <div class="barlbl" id="barlbl"></div>
+      <div id="dayDetail"></div>
     </div>
     <p class="note" style="text-align:center">Diese App wurde von <span class="cn">Mummi</span> entwickelt – deiner Kuh-Mentorin für Kopf &amp; Körper. Muh. 🐮</p>
   </section>
@@ -301,8 +381,7 @@ details.fold>summary .ic{background:var(--cream)}
   <section class="view" id="v-aufwaermen">
     <div class="card">
       <h2>Aufwärmen &amp; Dehnen</h2>
-      <p class="sub">Alles neben dem Platz machbar – ohne Ball, nur mit Körper und Theraband. Statisch gedehnt wird erst danach im Cool-down.</p>
-      <div class="sportpick"></div>
+      <p class="sub">Ohne Ball, neben dem Platz. Gedehnt wird danach im Cool-down.</p>
       <div class="seg mt" id="wuMode">
         <button data-w="warm" class="on">Aufwärmen</button>
         <button data-w="cool">Cool-down</button>
@@ -322,48 +401,28 @@ details.fold>summary .ic{background:var(--cream)}
   <!-- ===================== MENTAL ===================== -->
   <section class="view" id="v-mental">
     <div class="card">
-      <h2>Mentale Matchvorbereitung</h2>
-      <p class="sub">Dein Ordner für Kopf und Visualisierung – vom Abend vorher bis zum Start. Tippe auf einen Bereich, um ihn zu öffnen.</p>
-      <div class="sportpick"></div>
+      <h2>Mentale Wettkampfvorbereitung</h2>
+      <p class="sub">Vom Abend vorher bis zum Start.</p>
     </div>
 
-    <details class="fold plan">
-      <summary><span class="ic">📋</span><span class="tx">Mein Matchplan<small>Ziele, Schlüsselwort, Wenn-dann-Pläne</small></span></summary>
-      <div class="body">
-        <p class="sub">Prozessziele beschreiben, WIE du spielen willst – nicht das Ergebnis. Wird automatisch gespeichert.</p>
-        <label for="mpEv">Anlass</label>
-        <input type="text" id="mpEv" data-mp="ev" maxlength="80" placeholder="z. B. Ligaspiel Samstag, Turnier, Wettkampf">
-        <label>Meine 3 Prozessziele</label>
-        <input type="text" data-mp="g1" maxlength="80" placeholder="z. B. erster Aufschlag mit hoher Quote">
-        <input type="text" data-mp="g2" class="mt" maxlength="80" placeholder="z. B. nach Fehlern immer die Reset-Routine">
-        <input type="text" data-mp="g3" class="mt" maxlength="80" placeholder="z. B. Beine bewegen bis zum letzten Ball">
-        <label for="mpCue">Mein Schlüsselwort</label>
-        <input type="text" id="mpCue" data-mp="cue" maxlength="20" placeholder="z. B. locker, Ball, mutig, Rhythmus">
-        <label>Wenn-dann-Pläne</label>
-        <input type="text" data-mp="w1" maxlength="120" placeholder="Wenn ich einen Doppelfehler mache, dann … atme ich aus und mache mein Ritual.">
-        <input type="text" data-mp="w2" class="mt" maxlength="120" placeholder="Wenn der Schiri falsch pfeift, dann …">
-        <input type="text" data-mp="w3" class="mt" maxlength="120" placeholder="Wenn ich zurückliege, dann …">
-      </div>
-    </details>
 
     <details class="fold">
-      <summary><span class="ic">🎬</span><span class="tx">Geführte Visualisierungen<small>Kopfkino mit Mummi – mit Timer</small></span></summary>
+      <summary><span class="ic"><svg class="ico " data-k="vis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 8l3-5h15l-3 5"/><path d="M10 3L7 8M16 3l-3 5"/></svg></span><span class="tx">Geführte Visualisierungen<small>Kopfkino mit Mummi – mit Timer</small></span></summary>
       <div class="body" id="visList"></div>
     </details>
 
     <details class="fold">
-      <summary><span class="ic">⏱️</span><span class="tx">Countdown bis zum Start<small>Checkliste für den Matchtag</small></span></summary>
+      <summary><span class="ic"><svg class="ico " data-k="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg></span><span class="tx">Countdown bis zum Start<small>Checkliste für den Wettkampftag</small></span></summary>
       <div class="body">
-        <p class="sub">Wird jeden Tag neu zurückgesetzt.</p>
         <div id="countdown"></div>
       </div>
     </details>
 
     <details class="fold">
-      <summary><span class="ic">🌙</span><span class="tx">Der Abend vorher<small>Kopf leeren, gut schlafen</small></span></summary>
+      <summary><span class="ic"><svg class="ico " data-k="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span><span class="tx">Der Abend vorher<small>Kopf leeren, gut schlafen</small></span></summary>
       <div class="body">
         <ul class="steps">
-          <li>Matchplan aufschreiben – was auf dem Papier steht, muss der Kopf nicht festhalten.</li>
+          <li>Wettkampfplan aufschreiben – was auf dem Papier steht, muss der Kopf nicht festhalten.</li>
           <li>Tasche komplett packen, damit morgens nichts fehlt.</li>
           <li>Bildschirme etwa eine Stunde vor dem Schlafen weglegen.</li>
           <li>Im Bett: 4-7-8-Atmung (Tab Atmen) oder die Visualisierung „Bestleistung abrufen“.</li>
@@ -374,7 +433,7 @@ details.fold>summary .ic{background:var(--cream)}
     </details>
 
     <details class="fold">
-      <summary><span class="ic">📓</span><span class="tx">Match-Tagebuch<small>Nach dem Spiel: lernen statt grübeln</small></span></summary>
+      <summary><span class="ic"><svg class="ico " data-k="book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19.5V4.5"/><path d="M9 7h7M9 11h5"/></svg></span><span class="tx">Wettkampf-Tagebuch<small>Nach dem Spiel: lernen statt grübeln</small></span></summary>
       <div class="body plan">
         <label for="jGood">Was lief gut?</label>
         <textarea id="jGood" rows="2" maxlength="300"></textarea>
@@ -390,11 +449,16 @@ details.fold>summary .ic{background:var(--cream)}
 
   <!-- ===================== ATMEN ===================== -->
   <section class="view" id="v-atmen">
-    <div class="card">
+    <div class="seg atab" id="atmenTab">
+      <button data-a="breath" class="on"><svg class="ico sm" data-k="atem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></svg>Atemübung</button>
+      <span class="swap" id="atmenSwap" role="button" aria-label="Wechseln">⇄</span>
+      <button data-a="ground"><svg class="ico sm" data-k="hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V5a1.5 1.5 0 0 1 3 0v6"/><path d="M11 11V4a1.5 1.5 0 0 1 3 0v7"/><path d="M14 11V5.5a1.5 1.5 0 0 1 3 0V13"/><path d="M17 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a7 7 0 0 1-5.6-2.8L3.6 15a1.6 1.6 0 0 1 2.4-2l2 2"/></svg>5-4-3-2-1</button>
+    </div>
+    <div class="card" id="cardBreath">
       <h2>Atmen</h2>
       <p class="sub" id="breathInfo">Längeres Ausatmen beruhigt das Nervensystem. Folge einfach dem Kreis.</p>
       <div class="seg" id="breathMode">
-        <button data-m="calm" class="on">Ruhig 4·6</button>
+        <button data-m="calm" class="on">Ruhig</button>
         <button data-m="box">Box 4·4</button>
         <button data-m="sigh">Seufzer</button>
         <button data-m="f478">4-7-8</button>
@@ -411,12 +475,20 @@ details.fold>summary .ic{background:var(--cream)}
         <div class="count" id="bcount"></div>
       </div>
       <div class="row" style="justify-content:center"><button class="btn" id="breathBtn">Start</button></div>
+      
     </div>
 
-    <div class="card">
+    <div class="card" id="cardGround" style="display:none">
       <h2>5-4-3-2-1 – zurück ins Hier</h2>
       <p class="sub">Hilft, wenn Gedanken rasen oder die Nervosität hochkommt.</p>
       <div id="ground"></div>
+    </div>
+
+    <div class="card" id="cardPmr" style="display:none">
+      <h2>Anspannen &amp; Loslassen</h2>
+      <p class="sub">80 Sekunden: fest anspannen, dann loslassen. Ideal vor dem Start oder nach Frust.</p>
+      <button class="btn wide" id="pmrStart">▶ Geführt starten</button>
+      <div id="pmrPlayer"></div>
     </div>
   </section>
 
@@ -424,14 +496,13 @@ details.fold>summary .ic{background:var(--cream)}
   <section class="view" id="v-dranbleiben">
     <div class="card">
       <h2>Dranbleiben</h2>
-      <p class="sub">Große Ziele, winzige Schritte. Regel von <span class="cn">Mummi</span>: Ein Tag Pause ist okay – nur nie zwei hintereinander.</p>
+      <p class="sub">Regel von <span class="cn">Mummi</span>: Ein Tag Pause ist okay – nur nie zwei hintereinander.</p>
       <p class="note" style="margin:0 0 12px">Diese Woche: <b id="stSteps">0</b> Mini-Schritte · <b id="stSess">0</b> Aufwärm- &amp; Mental-Einheiten</p>
       <div id="goals"></div>
     </div>
 
     <div class="card plan" id="goalForm">
       <h2 id="goalFormTitle">➕ Neues Ziel anlegen</h2>
-      <p class="sub" id="goalFormSub">Ein großes Ziel und ein kleiner Schritt, den du jeden Tag schaffst.</p>
       <label for="gTitle">1. Dein Ziel</label>
       <input type="text" id="gTitle" placeholder="z. B. „Fitter für die Saison“" maxlength="60">
       <label for="gStep">2. Dein Mini-Schritt pro Tag</label>
@@ -444,21 +515,27 @@ details.fold>summary .ic{background:var(--cream)}
   <section class="view" id="v-spiel">
     <div class="card">
       <h2>Im Spiel – <span class="spname">Tennis</span></h2>
-      <p class="sub">Deine Sportart wählen, dann Schlüsselwort, Ziele und Techniken griffbereit.</p>
-      <div class="sportpick"></div>
-      <div class="cue" id="cueShow"></div>
-      <div id="goalsShow"></div>
-      <div class="row mt">
-        <button class="btn" id="quickReset">💨 Atem-Reset 30 s</button>
-        <button class="btn soft" data-go="mental">Matchplan</button>
-      </div>
+      <div id="mpView"></div>
     </div>
+    <details class="fold plan" id="mpFold">
+      <summary><span class="ic" id="mpIc"></span><span class="tx"><span id="mpFoldT">Wettkampfplan</span><small id="mpFoldS">Antippen und aufschreiben</small></span></summary>
+      <div class="body" id="mpEdit">
+        <label for="mpCue">Mein Schlüsselwort</label>
+        <input type="text" id="mpCue" data-mp="cue" maxlength="20">
+        <label>Was ich mir vornehme</label>
+        <input type="text" data-mp="g1" maxlength="80">
+        <input type="text" data-mp="g2" class="mt" maxlength="80">
+        <label>Mental</label>
+        <input type="text" data-mp="g3" maxlength="80">
+        <div class="row mt"><button class="btn wide" id="mpDone">Wettkampfplan speichern</button></div>
+      </div>
+    </details>
     <div class="card">
       <h2>Typische Momente</h2>
-      <p class="sub">Tippe auf eine Situation – die passende Technik öffnet sich.</p>
+      <p class="sub">Tippen öffnet die passende Technik.</p>
       <div id="moments"></div>
     </div>
-    <p class="sub" style="margin:4px 4px 10px">Alle Techniken – mit Beispiel für deine Sportart:</p>
+    <p class="sub" style="margin:4px 4px 10px">Alle Techniken</p>
     <div id="techList"></div>
   </section>
 
@@ -478,13 +555,19 @@ details.fold>summary .ic{background:var(--cream)}
   <h2>Einstellungen</h2>
   <label class="sub" style="display:block;margin-top:12px">Name deiner Kuh</label>
   <input type="text" id="nameIn" maxlength="20">
-  <label class="sub" style="display:block;margin-top:12px">Wie soll sie dich nennen? (optional)</label>
-  <input type="text" id="userIn" maxlength="30" placeholder="Dein Vorname">
   <div class="row mt"><button class="btn" id="saveSettings">Speichern</button><button class="btn ghost" id="closeSettings">Schließen</button></div>
   <hr style="border:none;border-top:1px solid var(--line);margin:18px 0">
   <div id="resetArea"></div>
 </div></div>
 
+<div class="start on" id="start">
+  <div class="st-in">
+    <img class="st-cow" id="stCow" alt="Mummi">
+    <h1 class="st-h">Hey, ich bin <span class="cn">Mummi</span>!</h1>
+    <p class="st-p">Wähle deine Sportart</p>
+    <div class="st-grid" id="stGrid"></div>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -500,9 +583,19 @@ const fmt=s=>Math.floor(s/60)+':'+pad(s%60);
 const mins=s=>Math.round(s/60);
 
 /* ---------- state ---------- */
-function defaults(){return {name:'Mummi',user:'',sport:'tennis',checkins:[],goals:[],mps:{},journal:[],sessions:[],cls:{}};}
-function normalize(x){const s=Object.assign(defaults(),x||{});if(!s.mps||typeof s.mps!=='object')s.mps={};if(s.mp&&typeof s.mp==='object'&&Object.keys(s.mp).length){const k=s.sport||'tennis';if(!s.mps[k])s.mps[k]=s.mp;}delete s.mp;if(!s.cls||typeof s.cls!=='object')s.cls={};delete s.cl;if(!Array.isArray(s.journal))s.journal=[];if(!Array.isArray(s.sessions))s.sessions=[];if(s.name==='Berta')s.name='Mummi';delete s.chat;delete s.plan;return s;}
-let S=defaults(), ref=null, writing=false, dirty=false, saveT=null;
+function defaults(){return {name:'Mummi',user:'',sport:'tennis',per:{},perMigrated:true,mps:{},journal:[],cls:{}};}
+/* Check-ins, Ziele und Einheiten gehören jeweils nur zur gewählten Sportart */
+const PER_KEYS=['checkins','goals','sessions'];
+function bindPer(s){
+  if(!s.per||typeof s.per!=='object')s.per={};
+  if(!s.perMigrated){const k=s.sport||'tennis';const p=s.per[k]||(s.per[k]={});PER_KEYS.forEach(n=>{if(Array.isArray(s[n])&&s[n].length&&!(Array.isArray(p[n])&&p[n].length))p[n]=s[n];});s.perMigrated=true;}
+  PER_KEYS.forEach(n=>{delete s[n];Object.defineProperty(s,n,{configurable:true,enumerable:false,
+    get(){const p=this.per[this.sport||'tennis']||(this.per[this.sport||'tennis']={});if(!Array.isArray(p[n]))p[n]=[];return p[n];},
+    set(v){const p=this.per[this.sport||'tennis']||(this.per[this.sport||'tennis']={});p[n]=Array.isArray(v)?v:[];}});});
+  return s;
+}
+function normalize(x){const s=Object.assign(defaults(),x||{});if(!s.mps||typeof s.mps!=='object')s.mps={};if(s.mp&&typeof s.mp==='object'&&Object.keys(s.mp).length){const k=s.sport||'tennis';if(!s.mps[k])s.mps[k]=s.mp;}delete s.mp;if(!s.cls||typeof s.cls!=='object')s.cls={};delete s.cl;if(!Array.isArray(s.journal))s.journal=[];if(!Array.isArray(s.sessions))s.sessions=[];if(s.name==='Berta')s.name='Mummi';delete s.chat;delete s.plan;s.perMigrated=!!(x&&x.perMigrated);return bindPer(s);}
+let S=bindPer(defaults()), ref=null, writing=false, dirty=false, saveT=null;
 try{const raw=localStorage.getItem(LSKEY); if(raw) S=normalize(JSON.parse(raw));}catch(e){}
 
 function save(){
@@ -538,93 +631,338 @@ let toastT;
 function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove('on'),2600);}
 
 /* ---------- Inhalte: Sprüche & Stimmung ---------- */
+/* Zufall ohne Wiederholung: erst wenn alle Sprüche einmal dran waren, geht es von vorn los */
+function bagPick(key,arr){
+  let bag=[];try{bag=JSON.parse(localStorage.getItem('mummi-bag-'+key)||'[]');}catch(e){}
+  bag=bag.filter(i=>i<arr.length);
+  let last=-1;try{last=+(localStorage.getItem('mummi-last-'+key)??-1);}catch(e){}
+  if(!bag.length){bag=arr.map((_,i)=>i);for(let i=bag.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[bag[i],bag[j]]=[bag[j],bag[i]];}
+    if(bag.length>1&&bag[0]===last)bag.push(bag.shift());}
+  const i=bag.shift();try{localStorage.setItem('mummi-bag-'+key,JSON.stringify(bag));localStorage.setItem('mummi-last-'+key,String(i));}catch(e){}
+  return arr[i];
+}
 const DAILY=[
  'Du musst heute nicht alles schaffen. Nur den nächsten Schritt.',
  'Wer langsam geht, kommt auch an. Ich bin der Beweis. Muh.',
- 'Der nächste Punkt ist der wichtigste. Der letzte ist schon Geschichte.',
  'Motivation kommt oft erst nach dem Anfangen. Also: einfach mal anfangen.',
- 'Gutes Aufwärmen ist der erste gewonnene Punkt.',
+ 'Gutes Aufwärmen ist schon halb gewonnen.',
  'Nervosität heißt: Es ist dir wichtig. Nutz die Energie.',
  'Kühe kauen alles zweimal. Fehler bitte nur einmal – gute Aktionen gern doppelt.',
  'Pausen sind kein Aufgeben. Auch ich liege viel auf der Wiese – und schau, wie entspannt ich bin.',
  'Vergleiche dich mit dir von gestern, nicht mit anderen von heute.',
- 'Du hast schon schwierigere Spiele gedreht. Die Quote ist auf deiner Seite.',
- 'Sieh es im Kopf, bevor du es auf dem Platz machst.',
+ 'Du hast schon schwierigere Tage gedreht. Die Quote ist auf deiner Seite.',
+ 'Sieh es im Kopf, bevor du es machst.',
  'Kontrolliere, was du kontrollieren kannst: Einsatz, Atmung, Einstellung.',
- 'Ein schlechtes Spiel ist ein Spiel. Kein Urteil über dich.',
+ 'Ein schlechter Tag ist ein Tag. Kein Urteil über dich.',
  'Kleine Gewohnheiten sind wie Gras: Man sieht es nicht wachsen, aber plötzlich ist da eine Wiese.',
  'Heute schon gelächelt? Muskeln trainieren zählt auch im Gesicht.',
- 'Ich habe keine Hände, keine Schuhe und keinen Schläger – und trotzdem diese App gebaut. Du schaffst dein Training.',
+ 'Ich habe keine Hände, keine Schuhe und keinen Laptop – und trotzdem diese App gebaut. Du schaffst dein Training.',
  'Wenn es zu viel ist: Halbieren. Und dann nochmal halbieren.',
  'Champions sind auch nur Menschen, die einmal öfter aufgestanden sind.',
  'Atme ein: Mut. Atme aus: Zweifel. Muh.',
  'Schweiß ist nur Schwäche, die gerade den Körper verlässt. Klingt dramatisch, stimmt aber ein bisschen.',
- 'Spiel mutig. Schlimmstenfalls lernst du was, bestenfalls gewinnst du.',
+ 'Sei mutig. Schlimmstenfalls lernst du was, bestenfalls gewinnst du.',
  'Du bist stärker, als dein Sofa dich glauben lässt.',
  'Disziplin heißt nicht hart zu sich sein. Es heißt, sich selbst nicht aufzugeben.',
  'Fehler sind Daten. Und du bist der Chef der Auswertung.',
- 'Wer lacht, verkrampft nicht. Lach also ruhig mal über einen verschlagenen Ball.',
+ 'Wer lacht, verkrampft nicht. Lach ruhig mal über einen Fehler.',
  'Weiter ist weiter. Auch im Schneckentempo. Auch im Kuhtempo.',
- 'Was würdest du einem Mitspieler in deiner Lage sagen? Sag es dir selbst.',
+ 'Was würdest du einem Freund in deiner Lage sagen? Sag es dir selbst.',
  'Heute ist ein guter Tag für einen guten Tag.',
  'Glaub an dich. Ich tu’s auch – und ich bin eine Kuh mit sehr gutem Urteilsvermögen.',
- 'Sei heute ein bisschen netter zu dir als gestern. Und ein bisschen schneller als dein innerer Schweinehund.'
+ 'Sei heute ein bisschen schneller als dein innerer Schweinehund. Der ist eh nicht in Form.',
+ 'Der härteste Schritt ist der zur Tür raus. Der Rest ist Bonus.',
+ 'Ausreden verbrennen null Kalorien.',
+ 'Du bist nicht müde. Du bist nur noch nicht warm.',
+ 'Ein Training, das du machst, schlägt zehn perfekte Pläne, die du nicht machst.',
+ 'Heute säen, morgen ernten. Ich kenn mich aus mit Feldern.',
+ 'Scheitern tut weh. Nicht probieren tut länger weh.',
+ 'Druck ist ein Privileg. Er heißt: Du bist dabei, wo es zählt.',
+ 'Mach heute was, wofür dir dein Zukunfts-Ich ein High Five gibt.',
+ 'Kopf hoch, Schultern runter, Blick nach vorn. So stehen Gewinner. Und Kühe.',
+ 'Talent ist nett. Dranbleiben ist netter.',
+ 'Wenn’s brennt in den Beinen: Das ist der Fortschritt, der gerade einzieht.',
+ 'Du musst nicht motiviert sein. Du musst nur anfangen. Motivation kommt dann mit dem Bus nach.',
+ 'Gestern ist vorbei, morgen ist noch nicht da. Heute ist deine Bühne.',
+ 'Selbst die beste Kuh gibt nicht jeden Tag gleich viel Milch. Gib heute, was du hast.',
+ 'Ruhig bleiben ist eine Superkraft. Und du hast sie im Training.',
+ 'Jeder Profi war mal Anfänger. Der Unterschied: Er hat nicht aufgehört.',
+ 'Du bist heute genau eine Einheit davon entfernt, stolz auf dich zu sein.',
+ 'Lieber 80 % durchziehen als 100 % planen und liegen bleiben.',
+ 'Muh heißt auf Kuhisch übrigens: „Los jetzt!“'
 ];
-function pickDaily(){
-  let last=-1;try{last=+(localStorage.getItem('mummi-daily-last')??-1);}catch(e){}
-  let i=Math.floor(Math.random()*DAILY.length);
-  if(DAILY.length>1)while(i===last)i=Math.floor(Math.random()*DAILY.length);
-  try{localStorage.setItem('mummi-daily-last',String(i));}catch(e){}
-  return DAILY[i];
-}
-const DAILY_NOW=pickDaily();
-const MOODS=[
- {v:1,l:'Schwer',c:'var(--m1)'},{v:2,l:'Mau',c:'var(--m2)'},{v:3,l:'Okay',c:'var(--m3)'},{v:4,l:'Gut',c:'var(--m4)'},{v:5,l:'Stark',c:'var(--m5)'}];
 const REPLY={
  1:['Danke, dass du ehrlich bist. Heute zählt nicht Leistung, sondern Durchhalten – und genau das machst du gerade.',
     'Schwere Tage gehören dazu, auch bei den Besten. Ein Glas Wasser, drei ruhige Atemzüge – das reicht als Schritt.',
     'Auch Champions haben Tage wie diesen. Der Unterschied: Sie stehen morgen wieder auf. Und das wirst du auch.',
     'Heute darf es leicht sein. Kurz raus an die Luft, eine Nachricht an jemanden, den du magst. Mehr musst du nicht.',
-    'Ich lieg heute neben dir auf der Wiese. Morgen stehen wir zusammen wieder auf. Muh.'],
+    'Ich lieg heute neben dir auf der Wiese. Morgen stehen wir zusammen wieder auf.',
+    'Du musst heute nichts beweisen. Sei einfach freundlich zu dir.',
+    'Ein schwerer Tag ist ein Tag – nicht dein ganzes Leben. Er geht vorbei.',
+    'Es ist okay, nicht okay zu sein. Gut, dass du es aufschreibst.',
+    'Kleiner Plan für heute: was essen, was trinken, früh schlafen. Das ist schon richtig viel.',
+    'Manchmal ist Pause das stärkste Training. Dein Körper und dein Kopf holen sich gerade Kraft.',
+    'Wen kannst du heute kurz anrufen? Reden hilft oft mehr als jede Übung.',
+    'Du hast schon viele schwere Tage geschafft. Deine Bilanz ist 100 %.',
+    'Atme einmal lang aus. Länger als ein. Und nochmal. Ich bin da.',
+    'Morgen ist ein neuer Tag. Heute reicht es, dranzubleiben.',
+    'Danke, dass du da bist. Wirklich.'],
  2:['Mau ist okay. Du musst nicht gut drauf sein, um etwas Gutes für dich zu tun.',
     'Mau-Tage sind Aufbautage. Such dir eine Mini-Sache aus, so klein, dass du nicht Nein sagen kannst.',
-    'Nicht jeder Tag ist ein Matchball. Heute reicht ein sauberer Punkt.',
+    'Nicht jeder Tag muss ein Rekordtag sein. Heute reicht ein kleiner Schritt.',
     '10 Minuten Bewegung und die Welt sieht oft schon anders aus. Probier’s – ich wette ein Grasbüschel darauf.',
-    'Durchhängen ist erlaubt. Liegenbleiben nicht. Ein kleiner Schritt, und der Tag dreht sich.'],
+    'Durchhängen ist erlaubt. Liegenbleiben nicht. Ein kleiner Schritt, und der Tag dreht sich.',
+    'Mau ist nur „Muh“ mit schlechter Laune. Das kriegen wir hin.',
+    'Mach heute die Light-Version. Light zählt auch.',
+    'Musik an, 5 Minuten loslegen. Danach entscheidest du neu.',
+    'Auch ein mittelmäßiger Tag kann mit einem guten Moment enden. Such dir einen.',
+    'Kein Bock ist kein Grund – nur ein Gefühl. Und Gefühle ändern sich nach dem ersten Schritt.',
+    'Heute nicht 100 %? Dann eben 60 %. 60 ist mehr als null.',
+    'Ein Spaziergang an der frischen Luft wirkt Wunder. Sagt eine Kuh, die es wissen muss.',
+    'Kopf voll? Schreib dir drei Dinge auf, die heute okay waren. Mindestens eins findest du.',
+    'Der Tag ist noch nicht vorbei. Das Comeback auch nicht.',
+    'Mau ist der Anlauf. Gleich kommt der Sprung.'],
  3:['Okay ist eine solide Basis. Darauf lässt sich bauen.',
     'Okay heißt: Luft nach oben. Welcher eine Schritt macht heute den Unterschied? Den zuerst.',
     'Solider Tag! Jetzt noch eine Sache, auf die du heute Abend stolz bist – dann wird’s ein guter.',
-    'Nicht spektakulär, aber stabil. Stabil gewinnt Spiele.',
-    'Okay ist der perfekte Startpunkt für ein kurzes Training. Danach heißt es „gut“ – versprochen.'],
+    'Nicht spektakulär, aber stabil. Stabil gewinnt am Ende.',
+    'Okay ist der perfekte Startpunkt für ein kurzes Training. Danach heißt es „gut“ – versprochen.',
+    'Okay plus ein bisschen Bewegung gleich gut. Einfache Mathematik.',
+    'Mittelmaß ist der Startblock für was Großes.',
+    'Okay-Tage sind die heimlichen Helden. Hier wächst die Form.',
+    'Gib dem Tag noch einen Schubs – 10 Minuten reichen.',
+    'Konstanz schlägt Glanz. Und du bist konstant da.',
+    'Heute kein Feuerwerk? Dann eben eine gute Wunderkerze.',
+    'Wie wär’s mit einem kleinen Extra heute? Eine Dehnübung, ein Glas Wasser mehr.',
+    'Okay ist gut genug, um was Gutes draus zu machen.',
+    'Der Tag ist noch jung. Noch ist alles drin.',
+    'Solide! Jetzt noch ein Lächeln, dann ist der Tag rund.'],
  4:['Schön! Merk dir, was heute dazu beigetragen hat – das ist dein Werkzeugkasten für schwerere Tage.',
     'Läuft bei dir! Nutz den Schwung für dein Training oder einen Schritt bei deinem Ziel.',
     'Gute Laune ist ansteckend. Steck heute mal jemanden an.',
     'Das freut mich! Gute Tage sind kein Zufall – du hast was dafür getan.',
-    'Stark unterwegs. Heute ist ein guter Tag, um dir ein kleines Extra-Ziel zu setzen.'],
+    'Stark unterwegs. Heute ist ein guter Tag für ein kleines Extra-Ziel.',
+    'So sieht Form aus! Weiter so.',
+    'Gut drauf heißt: perfekter Tag, um was Neues zu probieren.',
+    'Wenn du heute gut drauf bist, gib 5 % mehr. Du hast es im Tank.',
+    'Muh-tastisch! Merk dir dieses Gefühl.',
+    'Heute klappt’s. Morgen auch – wenn du dranbleibst.',
+    'Gute Tage verdient man sich. Und du hast geliefert.',
+    'Schnapp dir den Schwung und mach einen Haken an deinem Ziel.',
+    'Positive Energie: geladen. Jetzt nur noch rauslassen.',
+    'Du bist heute gut drauf. Ich seh das.'],
  5:['Stark! Genieß das. Du hast es dir erarbeitet.',
-    'Wow, Topform! Speicher dieses Gefühl ab – genau das holst du dir vor dem nächsten Match zurück.',
+    'Wow, Topform! Speicher dieses Gefühl ab – genau das holst du dir vor dem nächsten Wettkampf zurück.',
     'Heute bist du die Kuh, die über den Mond springt. Muh!',
     'So sieht ein Siegertag aus. Was war dein Erfolgsrezept? Schreib’s dir auf.',
-    'Volle Energie! Perfekter Tag für eine Visualisierung – nimm dieses Gefühl mit ins nächste Spiel.']
+    'Volle Energie! Perfekter Tag für eine Visualisierung – nimm dieses Gefühl mit ins nächste Training.',
+    'Unaufhaltsam! Pass auf, dass du nicht abhebst – oder doch, flieg ruhig.',
+    'Champion-Modus aktiviert. Ich bin stolz auf dich.',
+    'Wenn heute Wettkampf wäre, würdest du gewinnen. Punkt.',
+    'Volle Batterie! Nutz sie – aber vergiss die Regeneration nicht.',
+    'Heute bist du die beste Version von dir. Merk dir, wie sie sich anfühlt.',
+    'Feuer! Gib’s weiter – an deine Familie und deine Freunde.',
+    'So stark, dass sogar ich beeindruckt bin. Und ich bin schwer zu beeindrucken.',
+    'Tag des Jahres? Könnte sein! Schreib auf, was ihn so gut gemacht hat.',
+    'Ab jetzt ist das hier dein Normal. Gewöhn dich dran.']
 };
+/* Sportart-spezifische Sprüche (kommen zu den allgemeinen dazu) */
+const SPDAILY={
+ tennis:['Ein Ball nach dem anderen. Der nächste ist immer der wichtigste.','Fokus auf den Ball, nicht auf die Tribüne.','Doppelfehler passieren. Doppelt aufgeben nicht.','Dein Aufschlag heute: so sicher wie meine Liebe zu frischem Gras.','Lach ruhig mal über einen verschlagenen Ball. Wer lacht, verkrampft nicht.','Netzroller sind Glück. Beinarbeit ist Können.','Spiel jeden Punkt, als wär’s der erste – nicht, als wär’s der letzte.','Selbst die Besten verschlagen Bälle. Ich übrigens alle – keine Arme.','Saiten richten, durchatmen, weiter. Dein Mini-Reset.','Breakball gegen dich? Perfekt. Jetzt zeigst du, was du draufhast.'],
+ padel:['Die Wand ist dein Freund. Lass den Ball ruhig kommen.','Geduld gewinnt im Padel. Und Lobs. Viele Lobs.','Abklatschen nach jedem Punkt – auch nach den schlechten.','Golden Point? Goldene Nerven.','Zwei am Netz sind stärker als einer an der Grundlinie.','Bandeja statt Brechstange.','Ein guter Partner macht dich besser. Sei heute dieser Partner.','Der Ball kommt aus der Wand zurück. Deine Motivation auch.','Lächeln ist im Padel erlaubt. Sogar erwünscht.','Ich würde ja mitspielen, aber ich passe nicht durchs Gitter.'],
+ fussball:['Ein Fehlpass ist kein Weltuntergang. Nachsetzen ist alles.','Schulterblick! Wer mehr sieht, spielt besser.','Das Spiel hat 90 Minuten. Du hast heute 90 Gelegenheiten, gut zu sein.','Die Kabine gewinnt Spiele. Sei heute der, der pusht.','Zweikampf verloren? Der nächste gehört dir.','Ich bin Rasen-Expertin. Und ich sag dir: Heute ist ein guter Tag zum Kicken.','Einfach spielen ist die hohe Kunst.','Ein Team ist nur so stark wie seine Stimme. Coach laut!','Gegentor? Der Anstoß ist auch eine Chance.','Lauf für deine Mitspieler. Sie laufen für dich.'],
+ basketball:['Verworfen? Der nächste Wurf weiß nichts vom letzten.','Defense gewinnt Spiele. Und macht weniger Lärm als Freiwürfe.','Box-out ist Liebe. Für den Rebound.','Gleiche Routine, gleicher Bogen, gleicher Erfolg.','Ich würde ja dunken, aber ich bin 25 Zentimeter groß.','Ein 8:0-Lauf beginnt mit einem Stopp. Hol ihn dir.','Crunchtime ist Showtime.','Sprint zurück – das ist der unsichtbare Punkt.','Spiel den Extra-Pass. Gute Teams teilen.','Freiwurf: ausatmen, Ring sehen, weich. Mehr nicht.'],
+ volleyball:['Annahme hoch, Laune hoch.','Jeder Punkt wird abgeklatscht. Auch die verlorenen.','Satzball? Sicher ins Feld, dann feiern.','Ein Block ist eine Mauer. Sei heute die Mauer.','Laut sein ist Teil des Spiels.','Ich bagger lieber Gras. Du baggerst Bälle.','Aufschlag ins Netz? Passiert. Der nächste sitzt.','Sechs Leute, ein Ziel. Sei die Stimme, die alle mitnimmt.','Plattform ruhig, Kopf ruhig.','Hechten ist erlaubt. Hauptsache, der Ball fällt nicht.'],
+ schwimmen:['Bahn für Bahn. Zug für Zug.','Ausatmen unter Wasser, einatmen über Wasser. Mehr Philosophie braucht’s nicht.','Wasser ist ehrlich: Es nimmt dir nichts übel, aber es schenkt dir auch nichts.','Ich schwimme wie ein Stein. Du nicht. Also los.','Lange Züge, ruhiger Kopf.','Die Wende ist der Neustart. Jedes Mal.','Gleiten ist auch Schwimmen. Das schnellste sogar.','Kaltes Wasser? Nach 50 Metern merkst du nichts mehr. Versprochen.','Zählen, atmen, ziehen. Der Rest ist Rhythmus.','Jeder Meter zählt. Auch der langsame.'],
+ kampfsport:['Deckung hoch, Kopf hoch.','Treffer kassiert? Atmen, bewegen, zurückschlagen.','Fäuste locker, Wille fest.','Die letzte Runde gehört den Mutigen. Und den Fitten.','Ich hab Hufe statt Fäuste. Deshalb trainierst du für uns beide.','Ruhig atmen ist deine geheimste Waffe.','Technik schlägt Kraft. Und Ausdauer schlägt alles.','Respekt vor dem Gegner, keine Angst vor ihm.','Jede Runde ist ein neuer Kampf.','Was du im Training gibst, hast du im Kampf.'],
+ gym:['Die Hantel wartet nicht. Und sie urteilt auch nicht.','Eine Wiederholung mehr. Nur eine.','Technik vor Gewicht. Das Ego bleibt in der Umkleide.','Muskelkater ist der Beweis, dass gestern was passiert ist.','Beintag? Ich hab vier Beine. Ich weiß, wovon ich rede.','Fortschritt ist leise: ein Kilo hier, eine Wiederholung da.','Satzpause ist Pause, nicht Handyzeit.','Der schwerste Satz ist der erste. Danach rollt’s.','Vergleich dich nicht mit dem Typen nebenan. Vergleich dich mit dir von letzter Woche.','Stark werden ist Geduld mit Gewichten.'],
+ rad:['Tritt rund, Kopf frei.','Der Berg ist nur so steil, wie du ihn denkst. Okay, ein bisschen steiler.','Essen und trinken, bevor du Hunger und Durst hast.','Gegenwind macht Beine. Sagt man so.','Abgehängt? Eigenes Tempo, nächste Kurve, neu bewerten.','Ich fahr nicht Rad. Ich hab’s mal versucht. Die Pedale waren dagegen.','Kilometer sammeln ist wie Gras fressen: Man hört einfach nicht auf.','Oberkörper locker, Beine arbeiten.','Der schönste Moment ist oben am Berg. Hol ihn dir.','Rückenwind kommt nach jeder Kurve. Irgendwann.']
+};
+const SPREPLY={
+"tennis": {
+"3": [
+"Okay ist wie 30:30 – alles noch drin.",
+"Okay ist wie ein Aufschlag, der gerade so reingeht. Zählt trotzdem!",
+"Mittlerer Tag? Dann eben solide Ballwechsel von der Grundlinie."
+],
+"4": [
+"Heute triffst du den Sweetspot. Nutz das.",
+"Heute ist dein Aufschlag eine Waffe.",
+"Gute Laune ist das beste neue Griffband."
+],
+"5": [
+"Heute bist du unbreakbar. Muh!",
+"Ass-Laune! Heute geht jeder Aufschlag durch.",
+"Spiel, Satz und Sieg für deine Laune!"
+]
+},
+"padel": {
+"3": [
+"Okay ist wie ein Ball aus der Wand – noch lange nicht vorbei.",
+"Okay ist ein sicherer Lob. Nicht spektakulär, aber er bringt dich ans Netz.",
+"Solider Tag. Jetzt die Wand für dich arbeiten lassen."
+],
+"4": [
+"Heute läuft die Bandeja von allein.",
+"Heute klappt die Vibora. Zeig sie!",
+"Dein Partner hat Glück mit dir heute."
+],
+"5": [
+"Golden-Point-Laune! Genieß das.",
+"Por tres! Heute fliegt der Smash aus dem Käfig.",
+"Du bist heute das Netz-Monster."
+]
+},
+"fussball": {
+"3": [
+"Okay ist 0:0 zur Halbzeit – alles offen.",
+"Okay ist ein sauberer Pass in die Mitte. Damit fängt jeder Angriff an.",
+"Noch kein Tor, aber das Spiel läuft."
+],
+"4": [
+"Heute bist du Spielmacher. Verteil die gute Laune.",
+"Heute triffst du nicht nur den Ball, sondern auch die Laune.",
+"Gute Laune ist dein Pressing auf den Tag."
+],
+"5": [
+"Hattrick-Laune! Muh!",
+"Traumtor-Laune! Ab in den Winkel.",
+"Heute bist du die Nummer 10 des Tages!"
+]
+},
+"basketball": {
+"3": [
+"Okay ist wie ein Wurf, der auf dem Ring tanzt – er kann noch reingehen.",
+"Okay ist ein Korbleger. Bringt auch zwei Punkte.",
+"Noch kein Dunk, aber das Spiel läuft."
+],
+"4": [
+"Heute ist dein Wurf heiß. Nutz das.",
+"Heute fällt der Dreier. Glaub dran.",
+"Gute Laune ist ein Assist für alle um dich."
+],
+"5": [
+"On fire! Heute triffst du alles.",
+"Buzzer-Beater-Laune!",
+"Heute dunkst du sogar über mich. Okay, ich bin klein."
+]
+},
+"volleyball": {
+"3": [
+"Okay ist eine solide Annahme. Jetzt noch der Angriff.",
+"Okay ist ein sicherer Bagger. Der nächste wird ein Schmetterball.",
+"Solide Annahme – jetzt kommt das Zuspiel."
+],
+"4": [
+"Heute sitzt jeder Aufschlag. Glaub dran.",
+"Heute schlägst du über jeden Block.",
+"Gute Laune ist ansteckend – wie der Teamjubel nach dem Punkt."
+],
+"5": [
+"Matchball-Laune! Abklatschen für dich!",
+"Schmetterball-Laune! Muh!",
+"Heute bist du die Mauer am Netz und der Hammer im Angriff."
+]
+},
+"schwimmen": {
+"3": [
+"Okay ist eine ruhige Bahn. Jetzt noch ein bisschen Tempo.",
+"Okay ist Einschwimmen. Gleich kommt die schnelle Bahn.",
+"Solide Bahn. Jetzt noch eine saubere Wende."
+],
+"4": [
+"Heute gleitest du durch den Tag.",
+"Heute gleitest du wie ein Delfin.",
+"Gute Laune ist der beste Abstoß vom Beckenrand."
+],
+"5": [
+"Heute bist du schneller als jede Welle!",
+"Bestzeit-Laune! Ab ins Wasser.",
+"Heute schwimmst du sogar mir davon. Na gut, das ist nicht schwer."
+]
+},
+"kampfsport": {
+"3": [
+"Okay ist Runde eins – du findest gerade deinen Rhythmus.",
+"Okay ist eine gute Deckung. Jetzt noch der Konter.",
+"Die erste Runde ist vorbei, du stehst noch. Das zählt."
+],
+"4": [
+"Heute ist die Deckung oben und die Laune auch.",
+"Heute sitzt jede Kombination.",
+"Gute Laune ist der beste Aufwärm-Jab."
+],
+"5": [
+"K.-o.-Laune! Aber nur für deine Ausreden.",
+"Mehr Energie geht kaum. Muh-hammad Ali wäre stolz.",
+"Heute schwebst du wie ein Schmetterling und stichst wie eine … Kuh."
+]
+},
+"gym": {
+"3": [
+"Okay ist ein guter Aufwärmsatz. Jetzt kommt der Arbeitssatz.",
+"Okay ist ein guter Satz. Noch zwei, dann hast du ihn.",
+"Solide Form. Jetzt noch die letzte Wiederholung."
+],
+"4": [
+"Heute fühlen sich die Gewichte leichter an. Nutz das.",
+"Heute fühlt sich die Stange leicht an.",
+"Gute Laune plus Trainingsenergie? Gefährlich gut."
+],
+"5": [
+"Rekord-Laune! Vielleicht ist heute PR-Tag.",
+"Heute ist PR-Tag. Ich spür das.",
+"Die Hanteln haben heute Angst vor dir."
+]
+},
+"rad": {
+"3": [
+"Okay ist ein flaches Stück – gut, um ins Tempo zu finden.",
+"Okay ist ein flaches Stück. Gleich kommt der Berg.",
+"Solides Tempo. Jetzt noch rund treten."
+],
+"4": [
+"Rückenwind im Kopf! Fahr mit.",
+"Heute rollt’s wie im Windschatten.",
+"Gute Laune ist dein Rückenwind."
+],
+"5": [
+"Heute fährst du jeden Berg hoch. Muh!",
+"Bergkönig-Laune! Muh!",
+"Heute fährst du allen davon. Sogar dem Wind."
+]
+}
+};
+function dailyPool(){return DAILY.concat(SPDAILY[sp()]||[]);}
+function pickReply(m){const spp=((SPREPLY[sp()]||{})[m])||[];if(spp.length&&Math.random()<0.4)return bagPick('rsp'+m+sp(),spp);return bagPick('reply'+m,REPLY[m]);}
+function replyPool(m){return REPLY[m].concat(((SPREPLY[sp()]||{})[m])||[]);}
+let dailyNow='';
+
+
+const MOODS=[
+ {v:1,l:'Schwer',c:'var(--m1)'},{v:2,l:'Mau',c:'var(--m2)'},{v:3,l:'Okay',c:'var(--m3)'},{v:4,l:'Gut',c:'var(--m4)'},{v:5,l:'Stark',c:'var(--m5)'}];
+
 const ASK=['Hey, wie war dein Tag?','Was hast du heute geschafft?','Was hast du heute erreicht?','Worauf bist du heute stolz?','Was war heute dein bester Moment?'];
 const pick=(arr,avoid)=>{let i=Math.floor(Math.random()*arr.length);if(arr.length>1)while(arr[i]===avoid)i=Math.floor(Math.random()*arr.length);return arr[i];};
 let lastReply='',lastAsk='';
 
+const ICONS={"sp-tennis": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M5.6 5.6a9 9 0 0 1 0 12.8\"/><path d=\"M18.4 5.6a9 9 0 0 0 0 12.8\"/>", "sp-padel": "<ellipse cx=\"10\" cy=\"9\" rx=\"6\" ry=\"6.5\"/><path d=\"M14.2 13.6l5.3 5.9\"/><path d=\"M8 7h.01M11 6.5h.01M9.5 10h.01M12.5 9.5h.01\"/>", "sp-fussball": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7.5l3.4 2.4-1.3 4h-4.2l-1.3-4z\"/><path d=\"M12 3v4.5M15.4 9.9l4.4-1.6M14.1 13.9l2.7 3.9M9.9 13.9l-2.7 3.9M8.6 9.9L4.2 8.3\"/>", "sp-basketball": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18M12 3v18\"/><path d=\"M5.6 5.6c1.6 1.7 2.4 3.9 2.4 6.4s-.8 4.7-2.4 6.4M18.4 5.6c-1.6 1.7-2.4 3.9-2.4 6.4s.8 4.7 2.4 6.4\"/>", "sp-volleyball": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 12V3M12 12l7.8 4.5M12 12l-7.8 4.5\"/><path d=\"M7.5 4.2C10 6 12 8.8 12 12M20.6 9.6C17.7 10.7 14.6 11 12 12M7.4 19.8C7.7 16.7 9.3 14 12 12\"/>", "sp-schwimmen": "<circle cx=\"17\" cy=\"6\" r=\"2\"/><path d=\"M4 12.5l5-3.5 4 3 3-2\"/><path d=\"M2 16.5c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5\"/><path d=\"M2 20.5c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5\"/>", "sp-kampfsport": "<path d=\"M7 11V7a5 5 0 0 1 10 0v6a5 5 0 0 1-5 5H9.5A3.5 3.5 0 0 1 6 14.5V13a2 2 0 0 1 2-2h4\"/><path d=\"M8 18v3h8v-3\"/>", "sp-gym": "<path d=\"M6.5 7v10M17.5 7v10M3.5 9.5v5M20.5 9.5v5M6.5 12h11\"/>", "sp-rad": "<circle cx=\"5.5\" cy=\"16\" r=\"3.8\"/><circle cx=\"18.5\" cy=\"16\" r=\"3.8\"/><path d=\"M5.5 16l4-7.5h5.5l3.5 7.5M9.5 8.5l2.5 7.5H5.5M15 8.5l-1-2.5h-2\"/>","reset": "<path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"/><path d=\"M3 21v-5h5\"/>", "atem": "<path d=\"M3 8h10a3 3 0 1 0-3-3\"/><path d=\"M3 12h15a3 3 0 1 1-3 3\"/><path d=\"M3 16h7\"/>", "film": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M10 8.5l6 3.5-6 3.5z\"/>", "cue": "<circle cx=\"8\" cy=\"15\" r=\"4\"/><path d=\"M11 12l9-9\"/><path d=\"M17 6l3 3\"/><path d=\"M14.5 8.5l2 2\"/>", "talk": "<path d=\"M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z\"/><path d=\"M8.5 10.5h7M8.5 14h4.5\"/>", "pause": "<rect x=\"6\" y=\"5\" width=\"4\" height=\"14\" rx=\"1.2\"/><rect x=\"14\" y=\"5\" width=\"4\" height=\"14\" rx=\"1.2\"/>", "big": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"1.3\"/>", "nerv": "<path d=\"M13 2L4 14h7l-1 8 9-12h-7z\"/>", "kontrolle": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 12.5l3 3 5-6\"/>", "momentum": "<path d=\"M3 17l6-6 4 4 8-8\"/><path d=\"M14 7h7v7\"/>", "fokus": "<path d=\"M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>", "team": "<circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20a6.5 6.5 0 0 1 13 0\"/><circle cx=\"17\" cy=\"9\" r=\"2.5\"/><path d=\"M16.5 14.5a5 5 0 0 1 5 5\"/>", "plan": "<rect x=\"5\" y=\"4\" width=\"14\" height=\"17\" rx=\"2\"/><path d=\"M9 4V3h6v1\"/><path d=\"M9 10h6M9 14h6M9 18h4\"/>", "vis": "<rect x=\"3\" y=\"8\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M3 8l3-5h15l-3 5\"/><path d=\"M10 3L7 8M16 3l-3 5\"/>", "clock": "<circle cx=\"12\" cy=\"13\" r=\"8\"/><path d=\"M12 9v4l2.5 2.5\"/><path d=\"M9 2h6\"/>", "moon": "<path d=\"M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z\"/>", "book": "<path d=\"M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5z\"/><path d=\"M4 19.5V4.5\"/><path d=\"M9 7h7M9 11h5\"/>", "hand": "<path d=\"M8 13V5a1.5 1.5 0 0 1 3 0v6\"/><path d=\"M11 11V4a1.5 1.5 0 0 1 3 0v7\"/><path d=\"M14 11V5.5a1.5 1.5 0 0 1 3 0V13\"/><path d=\"M17 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a7 7 0 0 1-5.6-2.8L3.6 15a1.6 1.6 0 0 1 2.4-2l2 2\"/>"};
+const ICON=k=>'<svg class="ico" data-k="'+k+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||'')+'</svg>';
 /* ---------- Sportarten ---------- */
-const SPORTS=[['tennis','Tennis'],['padel','Padel'],['fussball','Fußball'],['basketball','Basketball'],['volleyball','Volleyball'],['kampfsport','Kampfsport'],['gym','Gym'],['rad','Radsport']];
+const SPORTS=[['tennis','Tennis'],['padel','Padel'],['fussball','Fußball'],['basketball','Basketball'],['volleyball','Volleyball'],['schwimmen','Schwimmen'],['kampfsport','Kampfsport'],['gym','Gym'],['rad','Radsport']];
 const SPL=Object.fromEntries(SPORTS);
 
-/* Bausteine pro Sportart: Visualisierung, Countdown, Matchplan-Beispiele */
+/* Bausteine pro Sportart: Visualisierung, Countdown, Wettkampfplan-Beispiele */
 const SP={
- tennis:{place:'den Tennisplatz: Linien, Netz, Belag, das Geräusch der Bälle',gear:'den Schläger in der Hand, den Griff',start:'deinen ersten Aufschlag',flow:'einen sauberen Aufschlag, eine Vorhand longline, einen sicheren Volley',pressure:'Breakball oder Matchball',sit:'Doppelfehler, Rückstand, knappe Linienentscheidung',pack:'Schläger (besaitet) und Ersatzschläger, Bälle, Griffband, Schuhe, Ersatzkleidung',ph:['z. B. erster Aufschlag mit hoher Quote','z. B. nach Fehlern immer die Reset-Routine','z. B. Beine bewegen bis zum letzten Ball','Wenn ich einen Doppelfehler mache, dann … atme ich aus und mache mein Ritual.']},
- padel:{place:'den Padel-Court: Glaswände, Gitter, Netz, deinen Partner neben dir',gear:'den Schläger in der Hand',start:'den ersten Aufschlag oder Return',flow:'eine Bandeja, einen Ball sauber aus der Rückwand, einen Volley-Winner',pressure:'den Golden Point',sit:'Fehler vom Partner, Lob über euch, verlorener Golden Point',pack:'Schläger, Bälle, Padel-Schuhe, Ersatzkleidung',ph:['z. B. Netz gemeinsam einnehmen','z. B. Wandbälle geduldig spielen','z. B. nach jedem Punkt kurz mit dem Partner sprechen','Wenn mein Partner einen Fehler macht, dann … abklatschen und ein Satz Plan.']},
- fussball:{place:'das Spielfeld: Rasen, Linien, Tore, Mitspieler, Zuschauer',gear:'die Schuhe an den Füßen, den Ball',start:'den Anpfiff und deinen ersten Ballkontakt',flow:'eine saubere Ballannahme, einen genauen Pass, einen gewonnenen Zweikampf',pressure:'einen Elfmeter oder die Schlussminuten bei knappem Stand',sit:'Gegentor, Fehlpass, Schiri-Entscheidung',pack:'Schuhe (passende Stollen), Schienbeinschoner, Trikot, Ersatzsocken',ph:['z. B. vor jeder Ballannahme Schulterblick','z. B. nach Ballverlust sofort nachsetzen','z. B. laut coachen in der Defensive','Wenn wir ein Gegentor bekommen, dann … klatschen wir ab und spielen die ersten 5 Minuten einfach.']},
- basketball:{place:'die Halle: Parkett, Korb, Linien, das Quietschen der Schuhe',gear:'den Ball in den Händen',start:'den Sprungball und deinen ersten Angriff',flow:'einen sauberen Wurf, einen Pass in den Lauf, einen Defense-Stopp',pressure:'zwei Freiwürfe in der Schlussminute',sit:'verworfener Freiwurf, Ballverlust, Foul-Pfiff',pack:'Hallenschuhe, Trikot, Tape für die Sprunggelenke, Trinkflasche',ph:['z. B. gleiche Freiwurf-Routine jedes Mal','z. B. nach Ballverlust sofort zurücksprinten','z. B. Box-out bei jedem Wurf','Wenn ich einen Freiwurf verwerfe, dann … ausatmen, gleiche Routine beim zweiten.']},
- volleyball:{place:'die Halle oder den Beachcourt: Netz, Linien, dein Team',gear:'den Ball in den Händen beim Aufschlag',start:'deinen ersten Aufschlag oder die erste Annahme',flow:'eine präzise Annahme, ein gutes Zuspiel, einen harten Angriff',pressure:'einen Satzball oder Matchball',sit:'Annahmefehler, Aufschlag ins Netz, geblockter Angriff',pack:'Hallenschuhe, Knieschoner, Trikot, Trinkflasche',ph:['z. B. Aufschlag sicher ins Feld','z. B. Annahme hoch zur Mitte','z. B. nach jedem Punkt abklatschen','Wenn ich einen Annahmefehler mache, dann … Blick nach vorn, „nächster Ball“.']},
- kampfsport:{place:'die Matte, den Ring oder Käfig, den Kampfrichter, deine Ecke',gear:'Handschuhe oder Anzug, deinen festen Stand',start:'den Gong und den ersten Kontakt',flow:'saubere Beinarbeit, eine präzise Kombination, eine gute Verteidigung',pressure:'die letzte Runde bei knappem Stand',sit:'einen Treffer kassiert, Punkt verloren, im Griff des Gegners',pack:'Handschuhe/Bandagen, Mundschutz, Tiefschutz, Anzug, Gewicht prüfen',ph:['z. B. Deckung oben, auch wenn ich müde bin','z. B. ruhig atmen in jeder Pause','z. B. nach jeder Aktion raus aus der Linie','Wenn ich einen Treffer kassiere, dann … Deckung hoch, ausatmen, Distanz.']},
- gym:{place:'deinen Trainingsbereich: Hantelbank, Stange, Gewichte, deine Musik',gear:'die Stange in den Händen, den festen Griff',start:'deinen ersten Arbeitssatz',flow:'drei perfekte Wiederholungen mit sauberer Technik',pressure:'den schwersten Satz oder einen Rekordversuch',sit:'Gewicht geht nicht hoch, Technik bricht ein, keine Motivation',pack:'Trainingsplan, Schuhe, Gürtel/Kreide falls genutzt, Handtuch, Trinkflasche',ph:['z. B. jede Wiederholung kontrolliert','z. B. Satzpausen einhalten','z. B. Technik vor Gewicht','Wenn ein Satz nicht klappt, dann … Gewicht ablegen, atmen, Technik-Hinweis wählen.']},
- rad:{place:'die Strecke: Asphalt, Kurven, das Feld um dich herum',gear:'den Lenker in den Händen, die Füße in den Pedalen',start:'den Start und die ersten Kurbelumdrehungen',flow:'eine saubere Kurve, einen runden Tritt, eine Attacke im Anstieg',pressure:'den Schlussanstieg oder den Zielsprint',sit:'abgehängt werden, schwere Beine, Fahrfehler',pack:'Rad gecheckt (Reifen, Bremsen), Helm, Verpflegung, Trinkflaschen',ph:['z. B. im Anstieg gleichmäßig treten','z. B. alle 20 Minuten essen und trinken','z. B. Oberkörper locker lassen','Wenn ich abgehängt werde, dann … eigenes Tempo, nächstes Ziel: die nächste Kurve.']}
+ tennis:{place:'den Tennisplatz: Linien, Netz, Belag, das Geräusch der Bälle',gear:'den Schläger in der Hand, den Griff',start:'deinen ersten Aufschlag',flow:'einen sauberen Aufschlag, eine Vorhand longline, einen sicheren Volley',pressure:'Breakball oder Matchball',sit:'Doppelfehler, Rückstand, knappe Linienentscheidung',pack:'Schläger (besaitet) und Ersatzschläger, Bälle, Griffband, Schuhe, Ersatzkleidung',ph:['z. B. Aufschlag sicher ins Feld', 'z. B. Vorhand kontrolliert cross spielen', 'z. B. positiv bleiben, durchatmen', 'z. B. locker']},
+ padel:{place:'den Padel-Court: Glaswände, Gitter, Netz, deinen Partner neben dir',gear:'den Schläger in der Hand',start:'den ersten Aufschlag oder Return',flow:'eine Bandeja, einen Ball sauber aus der Rückwand, einen Volley-Winner',pressure:'den Golden Point',sit:'Fehler vom Partner, Lob über euch, verlorener Golden Point',pack:'Schläger, Bälle, Padel-Schuhe, Ersatzkleidung',ph:['z. B. Lob tief in die Ecke', 'z. B. Netz gemeinsam einnehmen', 'z. B. nach jedem Punkt abklatschen', 'z. B. geduldig']},
+ fussball:{place:'das Spielfeld: Rasen, Linien, Tore, Mitspieler, Zuschauer',gear:'die Schuhe an den Füßen, den Ball',start:'den Anpfiff und deinen ersten Ballkontakt',flow:'eine saubere Ballannahme, einen genauen Pass, einen gewonnenen Zweikampf',pressure:'einen Elfmeter oder die Schlussminuten bei knappem Stand',sit:'Gegentor, Fehlpass, Schiri-Entscheidung',pack:'Schuhe (passende Stollen), Schienbeinschoner, Trikot, Ersatzsocken',ph:['z. B. vor jeder Ballannahme Schulterblick', 'z. B. sichere, flache Pässe', 'z. B. positiv bleiben, Mitspieler pushen', 'z. B. weiter']},
+ basketball:{place:'die Halle: Parkett, Korb, Linien, das Quietschen der Schuhe',gear:'den Ball in den Händen',start:'den Sprungball und deinen ersten Angriff',flow:'einen sauberen Wurf, einen Pass in den Lauf, einen Defense-Stopp',pressure:'zwei Freiwürfe in der Schlussminute',sit:'verworfener Freiwurf, Ballverlust, Foul-Pfiff',pack:'Hallenschuhe, Trikot, Tape für die Sprunggelenke, Trinkflasche',ph:['z. B. Freiwürfe mit gleicher Routine', 'z. B. Box-out bei jedem Wurf', 'z. B. nach Fehlern abklatschen', 'z. B. weich']},
+ volleyball:{place:'die Halle oder den Beachcourt: Netz, Linien, dein Team',gear:'den Ball in den Händen beim Aufschlag',start:'deinen ersten Aufschlag oder die erste Annahme',flow:'eine präzise Annahme, ein gutes Zuspiel, einen harten Angriff',pressure:'einen Satzball oder Matchball',sit:'Annahmefehler, Aufschlag ins Netz, geblockter Angriff',pack:'Hallenschuhe, Knieschoner, Trikot, Trinkflasche',ph:['z. B. Aufschlag sicher ins Feld', 'z. B. Annahme hoch zur Mitte', 'z. B. abklatschen, laut sein', 'z. B. fest']},
+ kampfsport:{place:'die Matte, den Ring oder Käfig, den Kampfrichter, deine Ecke',gear:'Handschuhe oder Anzug, deinen festen Stand',start:'den Gong und den ersten Kontakt',flow:'saubere Beinarbeit, eine präzise Kombination, eine gute Verteidigung',pressure:'die letzte Runde bei knappem Stand',sit:'einen Treffer kassiert, Punkt verloren, im Griff des Gegners',pack:'Handschuhe/Bandagen, Mundschutz, Tiefschutz, Anzug, Gewicht prüfen',ph:['z. B. Deckung oben, auch wenn ich müde bin', 'z. B. nach jeder Aktion raus aus der Linie', 'z. B. ruhig atmen in jeder Pause', 'z. B. Deckung']},
+ gym:{place:'deinen Trainingsbereich: Hantelbank, Stange, Gewichte, deine Musik',gear:'die Stange in den Händen, den festen Griff',start:'deinen ersten Arbeitssatz',flow:'drei perfekte Wiederholungen mit sauberer Technik',pressure:'den schwersten Satz oder einen Rekordversuch',sit:'Gewicht geht nicht hoch, Technik bricht ein, keine Motivation',pack:'Trainingsplan, Schuhe, Gürtel/Kreide falls genutzt, Handtuch, Trinkflasche',ph:['z. B. jede Wiederholung sauber und kontrolliert', 'z. B. Satzpausen einhalten', 'z. B. Fokus auf mich, nicht auf andere', 'z. B. Spannung']},
+ schwimmen:{place:'das Becken: Bahnen, Leinen, Startblock, das Glitzern des Wassers',gear:'die Brille auf, die Kappe sitzt',start:'den Startsprung und die ersten Züge',flow:'einen kraftvollen Zug, eine saubere Wende, ruhiges Atmen',pressure:'die letzten 25 Meter',sit:'verpatzte Wende, Wasser geschluckt, jemand zieht vorbei',pack:'Badesachen, Schwimmbrille und Ersatzbrille, Kappe, Handtuch, Trinkflasche',ph:['z. B. lange, ruhige Züge','z. B. saubere Wenden','z. B. Bahn für Bahn denken','z. B. gleiten']},
+ rad:{place:'die Strecke: Asphalt, Kurven, das Feld um dich herum',gear:'den Lenker in den Händen, die Füße in den Pedalen',start:'den Start und die ersten Kurbelumdrehungen',flow:'eine saubere Kurve, einen runden Tritt, eine Attacke im Anstieg',pressure:'den Schlussanstieg oder den Zielsprint',sit:'abgehängt werden, schwere Beine, Fahrfehler',pack:'Rad gecheckt (Reifen, Bremsen), Helm, Verpflegung, Trinkflaschen',ph:['z. B. im Anstieg gleichmäßig treten', 'z. B. alle 20 Minuten essen und trinken', 'z. B. Abschnitt für Abschnitt denken', 'z. B. rund']}
 };
 
 /* ---------- Aufwärmprogramme – nur neben dem Platz, ohne Ball (Theraband erlaubt), je 10–11 Min. ---------- */
@@ -711,6 +1049,18 @@ const WARMUP={
   ['Liegestütze','8–10× locker, notfalls auf den Knien.',45],
   ['Ausfallschritte','Je Seite 6×, aufrecht.',45],
   ['Planke','2× 20 Sekunden.',45]]},
+ schwimmen:{t:'Schwimmen – Aufwärmen an Land',tip:'Alles am Beckenrand machbar. Danach im Wasser 200–400 m locker einschwimmen.',ex:[
+  ['Armkreisen','Erst einzeln, dann beide Arme – vorwärts und rückwärts, groß und locker.',90,'An Land'],
+  ['Schultern mit Band','Band vor der Brust auseinanderziehen, Außenrotation, je 10×.',60],
+  ['Rumpfrotation','Oberkörper locker drehen, Arme schwingen mit.',45],
+  ['Schwimmzüge trocken','Kraulzüge im Stand, langsam bis zügig.',60],
+  ['Brustkorb öffnen','Hände hinter den Kopf, Ellbogen weit, Oberkörper aufdrehen.',45],
+  ['Beinpendel','Vor/zurück und seitlich, je Bein.',45],
+  ['Hampelmann','Locker, Puls hochbringen.',60],
+  ['Fußgelenke','Füße kreisen und strecken – wichtig für den Beinschlag.',45],
+  ['Strecksprünge','Aus der Hocke hochstrecken wie beim Startsprung, 8×.',45],
+  ['Streamline halten','Arme über dem Kopf, Hände übereinander, ganz lang machen. 3× 10 s.',45],
+  ['Atmen wie im Wasser','Tief ein, lange aus – ruhig und gleichmäßig.',60]]},
  rad:{t:'Radsport – Aufwärmen vor dem Rennen',tip:'Komplett neben dem Rad machbar. Danach auf dem Rad noch 5–10 Minuten locker einrollen.',ex:[
   ['Locker laufen mit Armkreisen','Traben oder auf der Stelle laufen.',150],
   ['Katze-Kuh','Vierfüßlerstand, Rücken abwechselnd rund und hohl. Mummis Lieblingsübung.',45],
@@ -741,15 +1091,16 @@ const COOL_EXTRA={
  volleyball:[['Hintere Schulter','Arm quer vor die Brust legen und mit der anderen Hand am Oberarm heranziehen. Schulter bleibt unten, Blick geradeaus.',30,'Speziell Volleyball',1],['Trizeps & seitlicher Rücken','Arm über den Kopf, Ellbogen beugen, Hand zwischen die Schulterblätter. Mit der anderen Hand den Ellbogen sanft nach hinten ziehen und den Oberkörper leicht zur Gegenseite neigen.',30,null,1]],
  kampfsport:[['Hüfte & Leiste (Schmetterling)','Aufrecht sitzen, Fußsohlen zusammen, Fersen nah zum Körper. Knie sinken lassen und mit den Ellbogen sanft nachhelfen. Rücken lang.',45,'Speziell Kampfsport'],['Nacken','Schultern locker nach unten. Kopf sanft zur Seite neigen, Ohr Richtung Schulter. Nur halten, nicht ziehen.',20,null,1]],
  gym:[['Seitlicher Rücken (Lat)','An einer Stange oder einem Rahmen festhalten, Gesäß nach hinten schieben, Arme lang, Brust Richtung Boden sinken lassen. Zug seitlich am Rücken.',45,'Speziell Gym'],['Trainierte Muskeln','Die heute trainierten Muskeln gezielt noch einmal je 30 s dehnen. Beintag: Oberschenkel und Gesäß. Drücken: Brust und Trizeps. Ziehen: Lat und Bizeps.',90]],
+ schwimmen:[['Schultern & seitlicher Rücken','An Wand oder Bank festhalten, Gesäß nach hinten schieben, Brust Richtung Boden sinken lassen.',45,'Speziell Schwimmen'],['Hintere Schulter','Arm quer vor die Brust legen und mit der anderen Hand am Oberarm heranziehen.',30,null,1]],
  rad:[['Brustkorb öffnen','Rückenlage, ein gerolltes Handtuch quer unter die Schulterblätter legen, Arme locker über den Kopf. Gleicht die gebeugte Haltung auf dem Rad aus.',45,'Speziell Radsport'],['Nacken','Schultern locker nach unten. Kopf sanft zur Seite neigen, Ohr Richtung Schulter. Nur halten, nicht ziehen.',20,null,1]]};
 function coolFor(s){return COOL_BASE.concat(COOL_EXTRA[s]||[],[['Ruhig atmen','Auf den Rücken legen, eine Hand auf den Bauch. 4 Sekunden ein, 6 Sekunden aus. Spür, wie der Körper schwer wird.',60,'Abschluss']]);}
 /* Übungen je Seite für den geführten Ablauf aufteilen */
-function expand(ex){const out=[];ex.forEach(e=>{if(e[4]){out.push([e[0]+' – rechts',e[1],e[2]]);out.push([e[0]+' – links',e[1],e[2]]);}else out.push(e);});return out;}
+function expand(ex){const out=[];const add=(a,i)=>{a.src=i;out.push(a);};ex.forEach((e,i)=>{if(e[4]){add([e[0]+' – rechts',e[1],e[2]],i);add([e[0]+' – links',e[1],e[2]],i);}else add([e[0],e[1],e[2]],i);});return out;}
 const exTime=e=>e[2]*(e[4]?2:1);
 
 /* ---------- Visualisierungen (Text mit Sportart-Bausteinen) ---------- */
 function visFor(s){const p=SP[s];return [
- {k:'film',t:'Dein bestes Spiel – der Film',d:'Am Vorabend oder 1–2 Stunden vorher.',s:[
+ {k:'film',t:'Dein perfekter Wettkampf – der Film',d:'Am Vorabend oder 1–2 Stunden vorher.',s:[
   ['Ankommen','Setz oder leg dich bequem hin. Augen zu. Drei lange Atemzüge – ausatmen länger als einatmen.',30],
   ['Der Ort','Stell dir '+p.place+' vor. Wie ist das Licht, wie riecht es, was hörst du?',40],
   ['Dein Körper','Spür dich in deiner Sportkleidung – '+p.gear+'. Du bist wach, locker und bereit.',40],
@@ -773,7 +1124,7 @@ function visFor(s){const p=SP[s];return [
 
 /* ---------- Countdown ---------- */
 function countdownFor(s){const w=WARMUP[s];const tot=Math.round(w.ex.reduce((a,e)=>a+e[2],0)/60);return [
- ['Abend vorher','Tasche packen: '+SP[s].pack+'. Matchplan durchlesen.'],
+ ['Abend vorher','Tasche packen: '+SP[s].pack+'. Wettkampfplan durchlesen.'],
  ['3 Std. vorher','Letzte größere Mahlzeit: viele Kohlenhydrate, wenig Fett. Genug trinken.'],
  ['60 Min.','Ankommen, Ort ansehen. Musik oder Ruhe – was dir guttut.'],
  [(tot+15)+' Min.','Aufwärmprogramm '+SPL[s]+' starten (ca. '+tot+' Min., Tab Aufwärmen).'],
@@ -789,37 +1140,37 @@ const TECH=[
   'Loslassen: Ausatmen, Schultern fallen lassen.',
   'Refokussieren: Was ist der Plan für die nächste Aktion?',
   'Ritual: Immer gleicher kurzer Ablauf, dann los.'],
-  ex:{tennis:'Hinter die Grundlinie gehen, Saiten richten, Ball 3× tippen, Schlüsselwort.',padel:'Mit dem Partner abklatschen, ein Satz Plan, zurück in Position.',fussball:'Nach Fehlpass sofort nachsetzen oder Position suchen – innerlich „weiter“.',basketball:'Nach Ballverlust sofort zurücksprinten – der Sprint ist dein Reset.',volleyball:'Im Kreis abklatschen, Blick zum Netz, Schlüsselwort.',kampfsport:'Nach einem Treffer: Deckung hoch, ausatmen, Distanz herstellen, Beinarbeit.',gym:'Stange ablegen, 2 Atemzüge, einen Technik-Hinweis für den nächsten Versuch wählen.',rad:'Nach einem Fahrfehler: Trittfrequenz bewusst rund, Blick weit nach vorn.'}},
+  ex:{schwimmen:'Nach verpatzter Wende: unter Wasser ausatmen, Zug verlängern, Rhythmus finden.',tennis:'Hinter die Grundlinie gehen, Saiten richten, Ball 3× tippen, Schlüsselwort.',padel:'Mit dem Partner abklatschen, ein Satz Plan, zurück in Position.',fussball:'Nach Fehlpass sofort nachsetzen oder Position suchen – innerlich „weiter“.',basketball:'Nach Ballverlust sofort zurücksprinten – der Sprint ist dein Reset.',volleyball:'Im Kreis abklatschen, Blick zum Netz, Schlüsselwort.',kampfsport:'Nach einem Treffer: Deckung hoch, ausatmen, Distanz herstellen, Beinarbeit.',gym:'Stange ablegen, 2 Atemzüge, einen Technik-Hinweis für den nächsten Versuch wählen.',rad:'Nach einem Fahrfehler: Trittfrequenz bewusst rund, Blick weit nach vorn.'}},
  {k:'atem',i:'💨',t:'Atem-Reset',sub:'Doppelt einatmen, lang aus · 2–3 Atemzüge',w:'Puls hoch, Hände zittern, Gedanken rasen.',s:[
   'Durch die Nase tief einatmen.','Oben kurz noch einmal „nachatmen“.','Langsam und lang durch den Mund ausatmen.','2–3 Mal wiederholen.'],
-  ex:{tennis:'Zwischen den Punkten auf dem Weg zur Grundlinie.',padel:'Beim Ballholen an der Rückwand.',fussball:'Bei Unterbrechungen: Einwurf, Behandlungspause, vor Standards.',basketball:'An der Freiwurflinie, bevor du den Ball bekommst.',volleyball:'Auf dem Weg zur Aufschlagposition.',kampfsport:'In der Rundenpause in der Ecke – zuerst den Puls runter.',gym:'Zwischen den Sätzen, damit der Puls schneller sinkt.',rad:'Im flachen Stück nach dem Anstieg, tief in den Bauch.'}},
+  ex:{schwimmen:'Am Beckenrand zwischen den Serien.',tennis:'Zwischen den Punkten auf dem Weg zur Grundlinie.',padel:'Beim Ballholen an der Rückwand.',fussball:'Bei Unterbrechungen: Einwurf, Behandlungspause, vor Standards.',basketball:'An der Freiwurflinie, bevor du den Ball bekommst.',volleyball:'Auf dem Weg zur Aufschlagposition.',kampfsport:'In der Rundenpause in der Ecke – zuerst den Puls runter.',gym:'Zwischen den Sätzen, damit der Puls schneller sinkt.',rad:'Im flachen Stück nach dem Anstieg, tief in den Bauch.'}},
  {k:'film',i:'🎬',t:'3-Sekunden-Film',sub:'Mini-Visualisierung vor jeder Aktion',w:'Vor jeder geplanten Aktion.',s:[
   'Sehen: Wohin soll es gehen?','Fühlen: Die Bewegung einmal kurz im Körper spüren.','Sagen: Schlüsselwort – dann ausführen, ohne nachzudenken.'],
-  ex:{tennis:'Aufschlag: Ziel im Feld sehen, Schwung fühlen, „locker“.',padel:'Aufschlag: Ziel an der Seitenwand sehen, Bewegung fühlen, los.',fussball:'Elfmeter oder Freistoß: Ecke sehen, Anlauf fühlen, „durch“.',basketball:'Freiwurf: Ring sehen, Bogen und Handgelenk fühlen, „weich“.',volleyball:'Aufschlag: Zielzone sehen, Wurf und Schlag fühlen, „fest“.',kampfsport:'Vor dem Angriff: Lücke sehen, Kombination fühlen, explodieren.',gym:'Vor dem Satz: Bewegungsbahn sehen, Spannung fühlen, „Druck“.',rad:'Vor der Attacke: Linie sehen, Antritt fühlen, „jetzt“.'}},
+  ex:{schwimmen:'Vor dem Start: Bahn sehen, Startsprung fühlen, „explodieren“.',tennis:'Aufschlag: Ziel im Feld sehen, Schwung fühlen, „locker“.',padel:'Aufschlag: Ziel an der Seitenwand sehen, Bewegung fühlen, los.',fussball:'Elfmeter oder Freistoß: Ecke sehen, Anlauf fühlen, „durch“.',basketball:'Freiwurf: Ring sehen, Bogen und Handgelenk fühlen, „weich“.',volleyball:'Aufschlag: Zielzone sehen, Wurf und Schlag fühlen, „fest“.',kampfsport:'Vor dem Angriff: Lücke sehen, Kombination fühlen, explodieren.',gym:'Vor dem Satz: Bewegungsbahn sehen, Spannung fühlen, „Druck“.',rad:'Vor der Attacke: Linie sehen, Antritt fühlen, „jetzt“.'}},
  {k:'cue',i:'🔑',t:'Schlüsselwort',sub:'Ein Wort statt vieler Gedanken',w:'Wenn du zu viel denkst oder verkrampfst.',s:[
   'Wähle ein Wort, das beschreibt, WIE du spielen willst.','Sag es dir leise vor jeder Aktion.','Während des Spiels nicht wechseln – das Wort ist dein Anker.'],
-  ex:{tennis:'Ideen: „Ball“, „locker“, „Beine“.',padel:'Ideen: „Mitte“, „geduldig“, „Netz“.',fussball:'Ideen: „Schulterblick“, „Zweikampf“, „weiter“.',basketball:'Ideen: „weich“, „hinten“, „Tempo“.',volleyball:'Ideen: „Plattform“, „hoch“, „fest“.',kampfsport:'Ideen: „Deckung“, „atmen“, „Druck“.',gym:'Ideen: „Spannung“, „Druck“, „sauber“.',rad:'Ideen: „rund“, „locker oben“, „Rhythmus“.'}},
+  ex:{schwimmen:'Ideen: „lang“, „gleiten“, „ziehen“.',tennis:'Ideen: „Ball“, „locker“, „Beine“.',padel:'Ideen: „Mitte“, „geduldig“, „Netz“.',fussball:'Ideen: „Schulterblick“, „Zweikampf“, „weiter“.',basketball:'Ideen: „weich“, „hinten“, „Tempo“.',volleyball:'Ideen: „Plattform“, „hoch“, „fest“.',kampfsport:'Ideen: „Deckung“, „atmen“, „Druck“.',gym:'Ideen: „Spannung“, „Druck“, „sauber“.',rad:'Ideen: „rund“, „locker oben“, „Rhythmus“.'}},
  {k:'talk',i:'💬',t:'Selbstgespräch drehen',sub:'Vom Kritiker zum Trainer',w:'Wenn der innere Kritiker laut wird.',s:[
   'Bemerke den Satz.','Sag innerlich „Stopp“.','Ersetze ihn durch eine Anweisung, was du als Nächstes TUST.'],
-  ex:{tennis:'„Mein Aufschlag ist heute Mist“ → „Ruhig hochwerfen, durchschwingen.“',padel:'„Wir verlieren jeden Wandball“ → „Früher drehen, Ball kommen lassen.“',fussball:'„Ich verliere jeden Zweikampf“ → „Tiefer stehen, Körper rein.“',basketball:'„Ich treffe heute nichts“ → „Gleicher Bogen, gleiche Routine.“',volleyball:'„Die Annahme ist eine Katastrophe“ → „Früh stehen, Plattform ruhig.“',kampfsport:'„Der ist zu stark“ → „Bewegen, Distanz halten, Chancen nutzen.“',gym:'„Das schaffe ich nie“ → „Eine Wiederholung nach der anderen.“',rad:'„Ich kann nicht mehr“ → „Bis zur nächsten Kurve, dann neu schauen.“'}},
+  ex:{schwimmen:'„Ich bin zu langsam“ → „Lange Züge, sauberer Rhythmus.“',tennis:'„Mein Aufschlag ist heute Mist“ → „Ruhig hochwerfen, durchschwingen.“',padel:'„Wir verlieren jeden Wandball“ → „Früher drehen, Ball kommen lassen.“',fussball:'„Ich verliere jeden Zweikampf“ → „Tiefer stehen, Körper rein.“',basketball:'„Ich treffe heute nichts“ → „Gleicher Bogen, gleiche Routine.“',volleyball:'„Die Annahme ist eine Katastrophe“ → „Früh stehen, Plattform ruhig.“',kampfsport:'„Der ist zu stark“ → „Bewegen, Distanz halten, Chancen nutzen.“',gym:'„Das schaffe ich nie“ → „Eine Wiederholung nach der anderen.“',rad:'„Ich kann nicht mehr“ → „Bis zur nächsten Kurve, dann neu schauen.“'}},
  {k:'pause',i:'⏸️',t:'Pausen-Routine',sub:'Jede längere Unterbrechung nutzen',w:'In jeder längeren Pause.',s:[
   'Runterkommen: trinken, 3 ruhige Atemzüge.','Kurze Bilanz: Was klappt? Was macht der Gegner?','Einen einzigen Fokus für die nächste Phase festlegen.','Schlüsselwort, Energie wieder hochfahren.'],
-  ex:{tennis:'Seitenwechsel (90 s): trinken, Handtuch, ein Fokus fürs nächste Game.',padel:'Seitenwechsel: mit dem Partner ein Satz zur Taktik, dann ein gemeinsames Ziel.',fussball:'Halbzeit: genau eine Sache, die du ändern willst.',basketball:'Timeout und Viertelpause: atmen, Anweisung des Trainers, Schlüsselwort.',volleyball:'Auszeit und Satzpause: gemeinsamer Fokus, z. B. „Annahme hoch“.',kampfsport:'Rundenpause: erst atmen, dann eine Anweisung aus der Ecke, dann Plan für die Runde.',gym:'Satzpause: Timer stellen, atmen, den nächsten Satz kurz im Kopf ablaufen lassen.',rad:'Verpflegung: essen, trinken, Plan bis zum nächsten Abschnitt.'}},
+  ex:{schwimmen:'Zwischen den Serien: atmen, Uhr checken, Fokus für die nächste Bahn.',tennis:'Seitenwechsel (90 s): trinken, Handtuch, ein Fokus fürs nächste Game.',padel:'Seitenwechsel: mit dem Partner ein Satz zur Taktik, dann ein gemeinsames Ziel.',fussball:'Halbzeit: genau eine Sache, die du ändern willst.',basketball:'Timeout und Viertelpause: atmen, Anweisung des Trainers, Schlüsselwort.',volleyball:'Auszeit und Satzpause: gemeinsamer Fokus, z. B. „Annahme hoch“.',kampfsport:'Rundenpause: erst atmen, dann eine Anweisung aus der Ecke, dann Plan für die Runde.',gym:'Satzpause: Timer stellen, atmen, den nächsten Satz kurz im Kopf ablaufen lassen.',rad:'Verpflegung: essen, trinken, Plan bis zum nächsten Abschnitt.'}},
  {k:'big',i:'🎯',t:'Big Points',sub:'Druckmomente sauber spielen',w:'In den entscheidenden Momenten.',s:[
   'Routine exakt gleich – nicht schneller werden.','Prozente spielen: deine sichere Lieblingsaktion.','Fokus auf Ausführung, nicht auf Ergebnis.','Danach – egal wie – Reset.'],
-  ex:{tennis:'Breakball, Satzball, Matchball, Tiebreak.',padel:'Golden Point und Tiebreak.',fussball:'Elfmeter, Schlussminuten, Konter in Überzahl.',basketball:'Freiwürfe in der Crunchtime, letzter Angriff.',volleyball:'Satzball, Matchball, Aufschlag bei 24:24.',kampfsport:'Letzte Runde, Entscheidung im Clinch.',gym:'Schwerster Satz, Rekordversuch.',rad:'Zielsprint, Schlussanstieg.'}},
+  ex:{schwimmen:'Die letzten 25 Meter und der Anschlag.',tennis:'Breakball, Satzball, Matchball, Tiebreak.',padel:'Golden Point und Tiebreak.',fussball:'Elfmeter, Schlussminuten, Konter in Überzahl.',basketball:'Freiwürfe in der Crunchtime, letzter Angriff.',volleyball:'Satzball, Matchball, Aufschlag bei 24:24.',kampfsport:'Letzte Runde, Entscheidung im Clinch.',gym:'Schwerster Satz, Rekordversuch.',rad:'Zielsprint, Schlussanstieg.'}},
  {k:'nerv',i:'⚡',t:'Nervosität umdeuten',sub:'Aufregung ist Energie',w:'Vor dem Start oder vor wichtigen Momenten.',s:[
   'Spüren statt bekämpfen: Herzklopfen ist Energie.','Sag dir „Ich bin bereit“ statt „Ich muss ruhig bleiben“.','Steck die Energie in die erste Aktion.'],
-  ex:{tennis:'Herzklopfen vor dem ersten Aufschlag: Energie für den ersten Schritt.',padel:'Nervös am Netz? Aktiv nach vorn statt abwarten.',fussball:'Energie aus der Kabine in die ersten Zweikämpfe stecken.',basketball:'Kribbeln beim Einlaufen in die erste Defense-Aktion stecken.',volleyball:'Vor dem ersten Aufschlag: „Ich bin bereit“ und ein sicheres Ziel wählen.',kampfsport:'Adrenalin beim Einlaufen ist normal – atmen, Schultern locker, Deckung hoch.',gym:'Vor dem Rekordversuch: Aufregung zeigt, dass der Körper bereit ist.',rad:'Am Start: Energie in einen sauberen, kontrollierten Start.'}},
+  ex:{schwimmen:'Auf dem Startblock: Kribbeln ist Energie für den Absprung.',tennis:'Herzklopfen vor dem ersten Aufschlag: Energie für den ersten Schritt.',padel:'Nervös am Netz? Aktiv nach vorn statt abwarten.',fussball:'Energie aus der Kabine in die ersten Zweikämpfe stecken.',basketball:'Kribbeln beim Einlaufen in die erste Defense-Aktion stecken.',volleyball:'Vor dem ersten Aufschlag: „Ich bin bereit“ und ein sicheres Ziel wählen.',kampfsport:'Adrenalin beim Einlaufen ist normal – atmen, Schultern locker, Deckung hoch.',gym:'Vor dem Rekordversuch: Aufregung zeigt, dass der Körper bereit ist.',rad:'Am Start: Energie in einen sauberen, kontrollierten Start.'}},
  {k:'kontrolle',i:'⭕',t:'Kontrollkreis',sub:'Nur auf das achten, was du steuern kannst',w:'Wenn Äußeres nervt.',s:[
   'Nicht steuerbar: Bedingungen, Schiri, Gegner, Ergebnis.','Steuerbar: Einstellung, Einsatz, Atmung, Routine, nächste Aktion.','Frag dich: „Was davon liegt bei mir?“'],
-  ex:{tennis:'Nicht steuerbar: Wind, Platz, Calls des Gegners.',padel:'Nicht steuerbar: Licht, Wände, Spielstil der Gegner.',fussball:'Nicht steuerbar: Schiri, Platz, Zuschauer.',basketball:'Nicht steuerbar: Pfiffe, Spielzeit, gegnerische Fans.',volleyball:'Nicht steuerbar: Schiri-Entscheidungen, Hallenlicht, Rotation des Gegners.',kampfsport:'Nicht steuerbar: Kampfrichter, Gegnertyp, Lautstärke.',gym:'Nicht steuerbar: wie stark andere sind, wie voll das Gym ist.',rad:'Nicht steuerbar: Wind, Wetter, Rennverlauf.'}},
+  ex:{schwimmen:'Nicht steuerbar: Wassertemperatur, Bahnnachbarn, Wellen.',tennis:'Nicht steuerbar: Wind, Platz, Calls des Gegners.',padel:'Nicht steuerbar: Licht, Wände, Spielstil der Gegner.',fussball:'Nicht steuerbar: Schiri, Platz, Zuschauer.',basketball:'Nicht steuerbar: Pfiffe, Spielzeit, gegnerische Fans.',volleyball:'Nicht steuerbar: Schiri-Entscheidungen, Hallenlicht, Rotation des Gegners.',kampfsport:'Nicht steuerbar: Kampfrichter, Gegnertyp, Lautstärke.',gym:'Nicht steuerbar: wie stark andere sind, wie voll das Gym ist.',rad:'Nicht steuerbar: Wind, Wetter, Rennverlauf.'}},
  {k:'momentum',i:'🔄',t:'Momentum zurückholen',sub:'Wenn der Gegner einen Lauf hat',w:'Mehrere Aktionen am Stück verloren.',s:[
   'Tempo rausnehmen: Pausen voll ausnutzen.','Einfach spielen: hohe Prozente, weniger Risiko.','Kleines Ziel: nur die nächste Aktion gewinnen.','Körpersprache bewusst: Kopf hoch, Blick nach vorn.'],
-  ex:{tennis:'Erste Aufschläge sicher, Tempo zwischen den Punkten raus.',padel:'Mehr Lobs, das Netz zurückerobern.',fussball:'Kompakt stehen, einfache Pässe, Standards nutzen.',basketball:'Timeout nehmen, sicherer Angriff, ein Defense-Stopp als Ziel.',volleyball:'Sicherer Aufschlag, Annahme hoch, als Team laut sein.',kampfsport:'Distanz oder Clinch nutzen, das Tempo selbst bestimmen.',gym:'Schlechter Tag: Gewicht leicht reduzieren, Technik sauber halten.',rad:'Ins Hinterrad setzen, Kraft sparen, Plan neu setzen.'}},
+  ex:{schwimmen:'Jemand zieht vorbei? Eigener Rhythmus, Zugfrequenz halten.',tennis:'Erste Aufschläge sicher, Tempo zwischen den Punkten raus.',padel:'Mehr Lobs, das Netz zurückerobern.',fussball:'Kompakt stehen, einfache Pässe, Standards nutzen.',basketball:'Timeout nehmen, sicherer Angriff, ein Defense-Stopp als Ziel.',volleyball:'Sicherer Aufschlag, Annahme hoch, als Team laut sein.',kampfsport:'Distanz oder Clinch nutzen, das Tempo selbst bestimmen.',gym:'Schlechter Tag: Gewicht leicht reduzieren, Technik sauber halten.',rad:'Ins Hinterrad setzen, Kraft sparen, Plan neu setzen.'}},
  {k:'fokus',i:'👁️',t:'Fokus-Anker',sub:'In 5 Sekunden zurück ins Jetzt',w:'Gedanken hängen am letzten Fehler oder am Ergebnis.',s:[
   'Augen: einen Punkt fixieren.','Ohren: ein Geräusch bewusst hören.','Füße: Kontakt zum Boden spüren.','Weiter.'],
-  ex:{tennis:'Fixpunkt: die Saiten.',padel:'Fixpunkt: der Ball an der Wand.',fussball:'Fixpunkt: der Ball und dein nächster Gegenspieler.',basketball:'Fixpunkt: vorderer Ring beim Wurf.',volleyball:'Fixpunkt: der Ball in der Hand des Aufschlägers.',kampfsport:'Fixpunkt: Brust und Schultern des Gegners.',gym:'Fixpunkt: ein Punkt an der Wand vor dir.',rad:'Fixpunkt: das Hinterrad vor dir.'}},
+  ex:{schwimmen:'Fixpunkt: die Linie am Beckenboden.',tennis:'Fixpunkt: die Saiten.',padel:'Fixpunkt: der Ball an der Wand.',fussball:'Fixpunkt: der Ball und dein nächster Gegenspieler.',basketball:'Fixpunkt: vorderer Ring beim Wurf.',volleyball:'Fixpunkt: der Ball in der Hand des Aufschlägers.',kampfsport:'Fixpunkt: Brust und Schultern des Gegners.',gym:'Fixpunkt: ein Punkt an der Wand vor dir.',rad:'Fixpunkt: das Hinterrad vor dir.'}},
  {k:'team',i:'🤝',t:'Mitspieler stärken',sub:'Gemeinsam ruhig bleiben',w:'Nach Fehlern von Mitspielern oder in schwierigen Phasen.',only:TEAM,s:[
   'Nach einem Fehler: abklatschen oder kurzer Blick – kein Vorwurf.','Konkrete Ansage statt Kritik: was als Nächstes passiert.','Gute Aktionen gemeinsam feiern – laut.'],
   ex:{padel:'Nach jedem Punkt kurz zum Partner: „Nächster, Lob auf die Rückhand.“',fussball:'„Weiter, ich sichere ab“ statt Kopfschütteln.',basketball:'Mitspieler nach Fehlwurf abklatschen, „nächster“.',volleyball:'Nach jedem Punkt in den Kreis, Fehler mit „meiner“ übernehmen.'}}
@@ -832,18 +1183,19 @@ const MOMENTS={
  volleyball:[['Eigener Aufschlag','film'],['Annahmefehler','reset'],['Satzball','big'],['Auszeit','pause']],
  kampfsport:[['Vor dem Kampf','nerv'],['Treffer kassiert','reset'],['Rundenpause','pause'],['Letzte Runde','big']],
  gym:[['Vor dem schweren Satz','film'],['Gewicht geht nicht hoch','reset'],['Zwischen den Sätzen','pause'],['Rekordversuch','big']],
+ schwimmen:[['Auf dem Startblock','nerv'],['Wende verpatzt','reset'],['Zwischen den Serien','pause'],['Letzte 25 Meter','big']],
  rad:[['Am Start','nerv'],['Abgehängt','momentum'],['Verpflegung','pause'],['Zielsprint','big']]
 };
 
 /* ---------- header ---------- */
-function greetText(){const h=new Date().getHours();const g=h<5?'Noch wach?':h<11?'Guten Morgen':h<17?'Hallo':h<22?'Guten Abend':'Späte Stunde';return g+(S.user?', '+S.user:'')+(h<5||h>=22?'':'!');}
+function greetText(){const h=new Date().getHours();const g=h<5?'Noch wach?':h<11?'Guten Morgen':h<17?'Hallo':h<22?'Guten Abend':'Späte Stunde';return g+(h<5||h>=22?'':'!');}
 function renderHeader(){
   $('#cowName').textContent=S.name;
   $$('.cn').forEach(e=>e.textContent=S.name);
   document.title=S.name+' – deine Mentorin für Kopf & Körper';
   const d=new Date();$('#todayLbl').textContent=d.toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long'});
   $('#greet').textContent=greetText();
-  $('#daily').textContent=DAILY_NOW;
+  $('#daily').textContent=dailyNow;
 }
 
 /* ---------- check-in ---------- */
@@ -861,70 +1213,124 @@ function renderMoods(){
   if(tc && selMood===null) showReply(tc.m,tc.r);
 }
 function showReply(m,txt){
-  const r=txt||pick(REPLY[m]);const el=$('#checkinReply');el.innerHTML='';
+  const r=txt||pickReply(m);const el=$('#checkinReply');el.innerHTML='';
   const d=document.createElement('div');d.className='reply';
   const b=document.createElement('b');b.textContent=S.name+': ';d.appendChild(b);
   d.appendChild(document.createTextNode(r));
-  const row=document.createElement('div');row.className='row mt';
-  const add=(t,cls,fn)=>{const x=document.createElement('button');x.className='btn '+cls;x.textContent=t;x.onclick=fn;row.appendChild(x);};
-  if(m<=2){add('Atmen','',()=>go('atmen'));add('5-4-3-2-1','soft',()=>{go('atmen');setTimeout(()=>{gi=0;renderGround();$('#ground').scrollIntoView({behavior:'smooth',block:'center'});},300);});}
-  else{add('Aufwärmen','',()=>go('aufwaermen'));add('Zu meinen Zielen','soft',()=>go('dranbleiben'));}
-  d.appendChild(row);
   if(m===1){const h=document.createElement('p');h.className='note mt';h.innerHTML='Wenn es sich gefährlich anfühlt, sprich bitte mit einem Menschen: TelefonSeelsorge <a href="tel:08001110111">0800 111 0 111</a> (24/7, anonym) · Schweiz <a href="tel:143">143</a> · Notruf <a href="tel:112">112</a>';d.appendChild(h);}
   el.appendChild(d);
 }
 $('#saveCheckin').onclick=()=>{
   if(!selMood) return;
   const n=$('#checkinNote').value.trim().slice(0,300);
-  lastReply=pick(REPLY[selMood],lastReply);S.checkins=S.checkins.filter(c=>c.d!==dkey());S.checkins.push({d:dkey(),m:selMood,n,r:lastReply});
+  lastReply=pickReply(selMood);S.checkins=S.checkins.filter(c=>c.d!==dkey());S.checkins.push({d:dkey(),m:selMood,n,r:lastReply});
   S.checkins.sort((a,b)=>a.d<b.d?-1:1); if(S.checkins.length>400) S.checkins=S.checkins.slice(-400);
   save();const m=selMood;selMood=null;$('#checkinMore').style.display='none';
   renderMoods();showReply(m,lastReply);renderStats();toast('Eingetragen. Gut gemacht.');
 };
 function streakOf(set){let n=0;let d=new Date();if(!set.has(dkey(d)))d=addDays(d,-1);while(set.has(dkey(d))){n++;d=addDays(d,-1);}return n;}
 function renderStats(){
-  $('#stStreak').textContent=streakOf(new Set(S.checkins.map(c=>c.d)));
+  const stk=streakOf(new Set(S.checkins.map(c=>c.d)));$('#stStreak').textContent=stk;$('#stStreakL').textContent=stk===1?'Tag':'Tage';
   const wk=new Set();for(let i=0;i<7;i++)wk.add(dkey(addDays(new Date(),-i)));
   let steps=0;S.goals.forEach(g=>g.done.forEach(d=>{if(wk.has(d))steps++;}));
   $('#stSteps').textContent=steps;
   $('#stSess').textContent=S.sessions.filter(x=>wk.has(x.d)).length;
   const bars=$('#bars'),lbl=$('#barlbl');bars.innerHTML='';lbl.innerHTML='';
   const map=Object.fromEntries(S.checkins.map(c=>[c.d,c.m]));
-  for(let i=13;i>=0;i--){const d=addDays(new Date(),-i),k=dkey(d),m=map[k];
+  if(!selDay)selDay=dkey();
+  for(let i=9;i>=0;i--){const d=addDays(new Date(),-i),k=dkey(d),m=map[k];
+    const col=document.createElement('button');col.type='button';col.className='bcol'+(k===selDay?' sel':'');col.setAttribute('aria-label',d.toLocaleDateString('de-DE'));
     const b=document.createElement('div');b.className='bar'+(m?'':' empty');
-    if(m){b.style.height=(m*20)+'%';b.style.background=MOODS[m-1].c;b.title=MOODS[m-1].l;}
-    bars.appendChild(b);const s=document.createElement('span');s.textContent=i===0?'heute':WD[d.getDay()];lbl.appendChild(s);}
+    if(m){b.style.height=(m*20)+'%';b.style.background=MOODS[m-1].c;}
+    col.appendChild(b);col.onclick=()=>{selDay=k;renderStats();};
+    bars.appendChild(col);const s=document.createElement('span');s.textContent=i===0?'heute':WD[d.getDay()];if(k===selDay)s.className='sel';lbl.appendChild(s);}
+  renderDay();
+}
+let selDay=null;
+function renderDay(){
+  const box=$('#dayDetail');box.innerHTML='';const c=S.checkins.find(x=>x.d===selDay);
+  const w=document.createElement('div');w.className='daycard';
+  const t=document.createElement('div');t.className='dayt';t.textContent=(selDay===dkey()?'Heute · ':'')+new Date(selDay+'T12:00').toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long'});w.appendChild(t);
+  if(!c){const p=document.createElement('p');p.className='note';p.style.margin='6px 0 0';p.textContent='Kein Eintrag an diesem Tag.';w.appendChild(p);box.appendChild(w);return;}
+  const mo=MOODS[c.m-1];const m=document.createElement('div');m.className='daymood';m.innerHTML='<i></i><span></span>';m.querySelector('i').style.background=mo.c;m.querySelector('span').textContent=mo.l;w.appendChild(m);
+  const row=(lab,txt)=>{const r=document.createElement('div');r.className='jrow';const l=document.createElement('span');l.className='jlab';l.textContent=lab;const x=document.createElement('span');x.textContent=txt;r.append(l,x);w.appendChild(r);};
+  if(c.n)row('Dein Eintrag',c.n);
+  if(c.r)row(S.name,c.r);
+  box.appendChild(w);
 }
 function logSession(k){S.sessions.push({d:dkey(),k});if(S.sessions.length>500)S.sessions=S.sessions.slice(-500);save();renderStats();}
 
 /* ---------- geführter Ablauf (Timer für Aufwärmen & Visualisierung) ---------- */
 let P=null;
-function cue(){
-  try{navigator.vibrate&&navigator.vibrate(150);}catch(e){}
-  try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;const A=window.__mummiAC||(window.__mummiAC=new AC());const o=A.createOscillator(),g=A.createGain();o.frequency.value=880;g.gain.value=.07;o.connect(g);g.connect(A.destination);o.start();o.stop(A.currentTime+.15);}catch(e){}
+/* ---------- Ton (auch im Stumm-Modus), Vibration, Bildschirm wach halten ---------- */
+/* Web Audio für die Töne. Eine stumme, laufende <audio>-Spur schaltet das iPhone
+   in den Medien-Modus – dadurch ist der Ton auch bei Stummschalter hörbar. */
+function makeWav(sec){
+  const sr=8000,total=Math.ceil(sec*sr),buf=new ArrayBuffer(44+total*2),v=new DataView(buf);
+  const w=(o,s)=>{for(let i=0;i<s.length;i++)v.setUint8(o+i,s.charCodeAt(i));};
+  w(0,'RIFF');v.setUint32(4,36+total*2,true);w(8,'WAVE');w(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);
+  v.setUint32(24,sr,true);v.setUint32(28,sr*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);w(36,'data');v.setUint32(40,total*2,true);
+  let bin='';const u=new Uint8Array(buf);for(let i=0;i<u.length;i++)bin+=String.fromCharCode(u[i]);
+  return 'data:audio/wav;base64,'+btoa(bin);
 }
-function stopPlayer(){if(!P)return;clearInterval(P.iv);P.box.innerHTML='';if(P.onStop)P.onStop();P=null;}
+let AC=null,keepEl=null;
+function unlockAudio(){
+  try{if(navigator.audioSession)navigator.audioSession.type='playback';}catch(e){}
+  try{if(!keepEl){keepEl=document.createElement('audio');keepEl.src=makeWav(1);keepEl.loop=true;keepEl.setAttribute('playsinline','');keepEl.setAttribute('x-webkit-airplay','deny');document.body.appendChild(keepEl);}
+    const p=keepEl.play();if(p&&p.catch)p.catch(()=>{});}catch(e){}
+  try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;if(!AC)AC=new C();if(AC.state!=='running')AC.resume();
+    const b=AC.createBuffer(1,1,22050),s=AC.createBufferSource();s.buffer=b;s.connect(AC.destination);s.start(0);}catch(e){}
+}
+function releaseAudio(){try{if(keepEl&&!P&&!bRun)keepEl.pause();}catch(e){}}
+function tone(f,t0,dur,vol){const o=AC.createOscillator(),g=AC.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0.0001,t0);g.gain.exponentialRampToValueAtTime(vol,t0+.015);g.gain.exponentialRampToValueAtTime(0.0001,t0+dur);o.connect(g);g.connect(AC.destination);o.start(t0);o.stop(t0+dur+.05);}
+function snd(kind){
+  if(!AC)return;
+  try{if(AC.state!=='running')AC.resume();const t=AC.currentTime+.01;
+    if(kind==='next'){tone(784,t,.3,.6);tone(1175,t+.15,.5,.6);}
+    else if(kind==='done'){tone(784,t,.25,.6);tone(988,t+.16,.25,.6);tone(1319,t+.32,.7,.6);}
+    else if(kind==='in')tone(523,t,.4,.4);
+    else if(kind==='out')tone(392,t,.5,.4);
+    else if(kind==='hold')tone(659,t,.2,.3);
+  }catch(e){}
+}
+function buzz(p){try{navigator.vibrate&&navigator.vibrate(p);}catch(e){}}
+let wake=null;
+async function keepAwake(on){try{if(on){if(navigator.wakeLock&&!wake){wake=await navigator.wakeLock.request('screen');wake.addEventListener('release',()=>{wake=null;});}}else if(wake){await wake.release();wake=null;}}catch(e){}}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&(P||bRun)){keepAwake(true);if(AC&&AC.state!=='running')AC.resume();}});
+
+/* ---------- geführter Ablauf (Timer für Aufwärmen & Visualisierung) ---------- */
+function stopPlayer(){if(!P)return;clearInterval(P.iv);P.box.innerHTML='';if(P.onStop)P.onStop();P=null;if(!bRun)keepAwake(false);releaseAudio();}
 function startPlayer(box,steps,opts){
-  stopPlayer();
-  P={box,steps,i:0,left:steps[0][2],paused:false,iv:null,onDone:opts.onDone,onStop:opts.onStop};
+  stopPlayer();unlockAudio();keepAwake(true);
+  P={box,steps,i:0,left:steps[0][2],endAt:Date.now()+steps[0][2]*1000,paused:false,iv:null,onDone:opts.onDone,onStop:opts.onStop,onStep:opts.onStep};
   box.innerHTML='<div class="player"><div class="pn"></div><div class="progress"><i></i></div><div class="pt"></div><div class="pd"></div><div class="pc"></div><div class="px"></div><div class="row"><button class="btn ghost" data-p="prev">Zurück</button><button class="btn" data-p="pause">Pause</button><button class="btn ghost" data-p="next">Weiter</button></div><div class="mt"><button class="del" data-p="stop">Beenden</button></div></div>';
-  box.querySelector('[data-p=prev]').onclick=()=>gotoStep(P.i-1);
+  box.querySelector('[data-p=prev]').onclick=()=>gotoStep(P.i-1,true);
   box.querySelector('[data-p=next]').onclick=()=>gotoStep(P.i+1);
-  box.querySelector('[data-p=pause]').onclick=e=>{P.paused=!P.paused;e.target.textContent=P.paused?'Weiter ▶':'Pause';};
+  box.querySelector('[data-p=pause]').onclick=e=>{P.paused=!P.paused;if(!P.paused){P.endAt=Date.now()+P.left*1000;}e.target.textContent=P.paused?'Weiter ▶':'Pause';};
   box.querySelector('[data-p=stop]').onclick=()=>stopPlayer();
-  cue();paintPlayer();
-  P.iv=setInterval(()=>{if(!P||P.paused)return;P.left--;if(P.left<=0)gotoStep(P.i+1);else P.box.querySelector('.pc').textContent=fmt(P.left);},1000);
+  paintPlayer();
+  P.iv=setInterval(()=>{
+    if(!P||P.paused)return;
+    const left=Math.max(0,Math.ceil((P.endAt-Date.now())/1000));
+    if(left!==P.left){P.left=left;
+      if(left<=0){gotoStep(P.i+1);return;}
+      P.box.querySelector('.pc').textContent=fmt(left);}
+  },250);
   box.scrollIntoView({behavior:'smooth',block:'center'});
 }
-function gotoStep(n){
+function gotoStep(n,back){
   if(!P)return;
   if(n<0)n=0;
   if(n>=P.steps.length){const box=P.box,done=P.onDone,stop=P.onStop;clearInterval(P.iv);P=null;
-    box.innerHTML='<div class="player"><div class="pt">Geschafft! 🐮</div><div class="pd"></div></div>';
-    box.querySelector('.pd').textContent=S.name+': Stark gemacht. Jetzt bist du bereit.';cue();if(stop)stop();if(done)done();return;}
-  P.i=n;P.left=P.steps[n][2];cue();paintPlayer();
+    box.innerHTML='<div class="player flash"><div class="pt">Geschafft! 🐮</div><div class="pd"></div></div>';
+    box.querySelector('.pd').textContent=S.name+': Stark gemacht. Jetzt bist du bereit.';
+    snd('done');buzz([300,120,300,120,500]);if(!bRun)keepAwake(false);setTimeout(releaseAudio,2000);if(stop)stop();if(done)done();return;}
+  P.i=n;P.left=P.steps[n][2];P.endAt=Date.now()+P.left*1000;
+  if(!back){snd('next');buzz([250,100,250]);}paintPlayer();
+  if(!back){const pl=P.box.querySelector('.player');pl.classList.remove('flash');void pl.offsetWidth;pl.classList.add('flash');}
 }
 function paintPlayer(){
+  if(P.onStep)P.onStep(P.steps[P.i].src);
   const b=P.box,st=P.steps[P.i],nx=P.steps[P.i+1];
   b.querySelector('.pn').textContent='Schritt '+(P.i+1)+' von '+P.steps.length;
   b.querySelector('.progress i').style.width=((P.i+1)/P.steps.length*100)+'%';
@@ -940,12 +1346,12 @@ function sp(){return SPL[S.sport]?S.sport:'tennis';}
 function MP(){if(!S.mps||typeof S.mps!=='object')S.mps={};return S.mps[sp()]||(S.mps[sp()]={});}
 function CLs(){if(!S.cls||typeof S.cls!=='object')S.cls={};let c=S.cls[sp()];if(!c||c.d!==dkey()||!Array.isArray(c.done))c=S.cls[sp()]={d:dkey(),done:[]};return c;}
 function renderPicks(){
-  $$('.sportpick').forEach(box=>{box.innerHTML='';SPORTS.forEach(([k,l])=>{const b=document.createElement('button');b.type='button';b.textContent=l;if(k===sp())b.className='on';b.onclick=()=>{if(S.sport===k)return;S.sport=k;save();stopPlayer();renderSport();toast(l+' gewählt');};box.appendChild(b);});});
+  $$('.sportpick').forEach(box=>{box.innerHTML='';SPORTS.forEach(([k,l])=>{const b=document.createElement('button');b.type='button';b.textContent=l;if(k===sp())b.className='on';b.onclick=()=>{if(S.sport===k)return;S.sport=k;save();stopPlayer();if($('#mpFold'))$('#mpFold').open=false;renderSport();toast(l+' gewählt');};box.appendChild(b);});});
 }
 function renderSport(){
   renderPicks();renderWarmup();renderVis();renderCountdown();renderTech();renderMoments();renderMP();renderSpiel();renderJournal();
   const ph=SP[sp()].ph;
-  $('[data-mp=g1]').placeholder=ph[0];$('[data-mp=g2]').placeholder=ph[1];$('[data-mp=g3]').placeholder=ph[2];$('[data-mp=w1]').placeholder=ph[3];
+  $('[data-mp=g1]').placeholder=ph[0];$('[data-mp=g2]').placeholder=ph[1];$('[data-mp=g3]').placeholder=ph[2];$('[data-mp=cue]').placeholder=ph[3];
   $$('.spname').forEach(e=>e.textContent=SPL[sp()]);
 }
 
@@ -969,12 +1375,13 @@ function renderWarmup(){
   });
   $('#wuStart').style.display='';$('#wuPlayer').innerHTML='';
 }
+function markEx(k){$$('#wuList .ex').forEach((el,i)=>{el.classList.toggle('cur',i===k);el.classList.toggle('done',k>=0&&i<k);})}
 $('#wuStart').onclick=()=>{
   $('#wuStart').style.display='none';const s=sp(),m=wuMode;
-  startPlayer($('#wuPlayer'),expand(curWarm().ex),{onDone:()=>{logSession(m+'-'+s);toast(m==='cool'?S.name+': Gut erholt. Muh!':S.name+': Aufgewärmt. Muh – los geht’s!');},onStop:()=>{$('#wuStart').style.display='';}});
+  startPlayer($('#wuPlayer'),expand(curWarm().ex),{onDone:()=>{logSession(m+'-'+s);toast(m==='cool'?S.name+': Gut erholt. Muh!':S.name+': Aufgewärmt. Muh – los geht’s!');},onStop:()=>{$('#wuStart').style.display='';markEx(-1);},onStep:markEx});
 };
 
-/* ---------- Mental: Matchplan ---------- */
+/* ---------- Mental: Wettkampfplan ---------- */
 let mpT;
 $$('[data-mp]').forEach(t=>{t.addEventListener('input',()=>{MP()[t.dataset.mp]=t.value.slice(0,200);clearTimeout(mpT);mpT=setTimeout(()=>{save();renderSpiel();},500);});});
 function renderMP(){$$('[data-mp]').forEach(t=>{if(document.activeElement!==t)t.value=MP()[t.dataset.mp]||'';});}
@@ -992,7 +1399,7 @@ function renderVis(){
     btn.onclick=()=>{btn.style.display='none';startPlayer(el.querySelector('.pl'),v.s,{onDone:()=>logSession('vis-'+v.k),onStop:()=>{btn.style.display='';}});};
     box.appendChild(el);
   });
-  const h=document.createElement('p');h.className='hint';h.textContent='So wirkt es am besten: aus den eigenen Augen sehen, in echtem Tempo, mit allen Sinnen – und regelmäßig, nicht nur am Wettkampftag.';box.appendChild(h);
+  const h=document.createElement('p');h.className='hint';h.textContent='Am besten: aus den eigenen Augen, in echtem Tempo, regelmäßig.';box.appendChild(h);
 }
 
 /* ---------- Mental: Countdown ---------- */
@@ -1024,26 +1431,34 @@ function renderJournal(){
   mine.slice(-5).reverse().forEach(j=>{
     const e=document.createElement('div');e.className='entry';
     const h=document.createElement('b');h.textContent=new Date(j.d+'T12:00').toLocaleDateString('de-DE',{day:'numeric',month:'short'})+(j.ev?' · '+j.ev:'');e.appendChild(h);
-    [['Gut',j.g],['Mitnehmen',j.l],['Fokus',j.n]].forEach(([k,v])=>{if(!v)return;const p=document.createElement('div');p.textContent=k+': '+v;e.appendChild(p);});
+    [['Lief gut',j.g],['Mitnehmen',j.l],['Nächstes Mal',j.n]].forEach(([k,v])=>{if(!v)return;const p=document.createElement('div');p.className='jrow';const l=document.createElement('span');l.className='jlab';l.textContent=k;const t=document.createElement('span');t.textContent=v;p.append(l,t);e.appendChild(p);});
     box.appendChild(e);
   });
 }
 
 /* ---------- Im Spiel ---------- */
 function renderSpiel(){
-  const mp=MP();$('#cueShow').textContent=mp.cue?'„'+mp.cue+'“':'';
-  const gs=$('#goalsShow');gs.innerHTML='';
-  const goals=[mp.g1,mp.g2,mp.g3].filter(Boolean);
-  if(!mp.cue&&!goals.length){const p=document.createElement('p');p.className='note';p.textContent='Noch kein Matchplan für '+SPL[sp()]+'. Leg im Tab Mental dein Schlüsselwort und deine Prozessziele fest – dann stehen sie hier.';gs.appendChild(p);return;}
-  if(goals.length){const ul=document.createElement('ul');ul.className='goalsmini';goals.forEach(g=>{const li=document.createElement('li');li.textContent=g;ul.appendChild(li);});gs.appendChild(ul);}
+  const mp=MP(),v=$('#mpView');v.innerHTML='';
+  $('#mpIc').innerHTML=ICON('plan');
+  const empty=!mp.cue&&!mp.g1&&!mp.g2&&!mp.g3;
+  $('#mpFoldT').textContent=empty?'Wettkampfplan':'Wettkampfplan bearbeiten';
+  $('#mpFoldS').textContent=empty?'Antippen und aufschreiben':'Schlüsselwort und Ziele';
+  if(empty)return;
+  const sec=(title)=>{const s=document.createElement('div');s.className='mpsec';const t=document.createElement('span');t.className='tag';t.textContent=title;s.appendChild(t);v.appendChild(s);return s;};
+  if(mp.cue){const s=sec('Schlüsselwort');const d=document.createElement('div');d.className='cue';d.textContent=mp.cue;s.appendChild(d);}
+  const row=(s,n,txt,cls)=>{const r=document.createElement('div');r.className='mprow '+(cls||'');r.innerHTML='<span class="mpn"></span><span></span>';r.firstChild.textContent=n;r.lastChild.textContent=txt;s.appendChild(r);};
+  const gl=[mp.g1,mp.g2].filter(Boolean);
+  if(gl.length){const s=sec('Was ich mir vornehme');gl.forEach((g,i)=>row(s,i+1,g));}
+  if(mp.g3){const s=sec('Mental');row(s,'✓',mp.g3,'mpwd');}
 }
+$('#mpDone').onclick=()=>{$$('#mpEdit [data-mp]').forEach(t=>{MP()[t.dataset.mp]=t.value.trim().slice(0,200);});save();$('#mpFold').open=false;renderSpiel();$('#v-spiel').scrollIntoView({behavior:'smooth',block:'start'});window.scrollTo({top:0,behavior:'smooth'});toast('Wettkampfplan gespeichert.');};
 function boldLead(li,x){const k=x.indexOf(':');if(k>0&&k<28){const b=document.createElement('b');b.textContent=x.slice(0,k+1);li.append(b,document.createTextNode(x.slice(k+1)));}else li.textContent=x;}
 function renderTech(){
   const s=sp();const box=$('#techList');box.innerHTML='';
   TECH.filter(t=>!t.only||t.only.includes(s)).forEach(t=>{
     const d=document.createElement('details');d.className='fold';d.dataset.k=t.k;
     d.innerHTML='<summary><span class="ic"></span><span class="tx"><span class="tt"></span><small></small></span></summary><div class="body"></div>';
-    d.querySelector('.ic').textContent=t.i;d.querySelector('.tt').textContent=t.t;d.querySelector('small').textContent='Wann: '+t.w;
+    d.querySelector('.ic').innerHTML=ICON(t.k);d.querySelector('.tt').textContent=t.t;d.querySelector('small').textContent='Wann: '+t.w;
     const body=d.querySelector('.body');
     if(t.ex&&t.ex[s]){const x=document.createElement('div');x.className='spx';x.innerHTML='<span class="lb"></span><span class="tx2"></span>';x.querySelector('.lb').textContent='So im '+SPL[s];x.querySelector('.tx2').textContent=t.ex[s];body.appendChild(x);}
     const tg=document.createElement('span');tg.className='tag';tg.textContent='Schritt für Schritt';body.appendChild(tg);
@@ -1058,7 +1473,7 @@ function renderMoments(){
     const t=TECH.find(x=>x.k===k);if(!t)return;
     const b=document.createElement('button');b.type='button';b.className='moment';
     b.innerHTML='<span class="ms"></span><span class="mt2"></span>';
-    b.querySelector('.ms').textContent=sit;b.querySelector('.mt2').textContent=t.i+' '+t.t+' ›';
+    b.querySelector('.ms').textContent=sit;b.querySelector('.mt2').innerHTML=ICON(t.k);b.querySelector('.mt2').append(t.t+' ›');
     b.onclick=()=>{const d=$('#techList details[data-k='+k+']');if(!d)return;$$('#techList details').forEach(x=>{if(x!==d)x.open=false;});d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});};
     box.appendChild(b);
   });
@@ -1070,9 +1485,8 @@ function renderGoals(){
   const box=$('#goals');box.innerHTML='';
   const more=S.goals.length>0;
   $('#goalFormTitle').textContent=more?'➕ Weiteres Ziel anlegen':'➕ Neues Ziel anlegen';
-  $('#goalFormSub').textContent=more?'Optional: Du kannst hier ein weiteres Ziel dazuschreiben. Weniger ist oft mehr – 1 bis 3 Ziele reichen.':'Ein großes Ziel und ein kleiner Schritt, den du jeden Tag schaffst.';
   $('#addGoal').textContent=more?'Weiteres Ziel anlegen':'Ziel anlegen';
-  if(!S.goals.length){const p=document.createElement('p');p.className='note';p.textContent='Noch kein Ziel. Leg unten dein erstes an – je kleiner der tägliche Schritt, desto besser.';box.appendChild(p);}
+  if(!S.goals.length){const p=document.createElement('p');p.className='note';p.textContent='Noch kein Ziel angelegt.';box.appendChild(p);}
   const today=dkey();
   S.goals.forEach(g=>{
     const el=document.createElement('div');el.className='goal';
@@ -1119,14 +1533,15 @@ function setBreath(m,d){
 }
 $$('#breathMode button').forEach(b=>b.onclick=()=>{setBreath(b.dataset.m);stopBreath();});
 $$('#breathDur button').forEach(b=>b.onclick=()=>{setBreath(null,+b.dataset.d);stopBreath();});
-function stopBreath(msg){bRun=false;bTimers.forEach(clearTimeout);bTimers=[];$('#breathBtn').textContent='Start';$('#phase').textContent=msg||'Bereit?';$('#bcount').textContent='';const c=$('#circle');c.style.transitionDuration='1s';c.style.transform='scale(.72)';}
+function stopBreath(msg){const was=bRun;bRun=false;bTimers.forEach(clearTimeout);bTimers=[];if(was&&!P){keepAwake(false);setTimeout(releaseAudio,1500);}$('#breathBtn').textContent='Start';$('#phase').textContent=msg||'Bereit?';$('#bcount').textContent='';const c=$('#circle');c.style.transitionDuration='1s';c.style.transform='scale(.72)';}
 function startBreath(){
-  bRun=true;$('#breathBtn').textContent='Stopp';
+  bRun=true;$('#breathBtn').textContent='Stopp';unlockAudio();keepAwake(true);
   const end=Date.now()+bDur*60000;const seq=MODES[bMode];let i=0;
   const step=()=>{
     if(!bRun)return;
-    if(Date.now()>=end){stopBreath('Gut gemacht. 🌿');toast(S.name+': Spürst du den Unterschied?');return;}
+    if(Date.now()>=end){stopBreath('Gut gemacht. 🌿');snd('done');buzz([300,120,300]);toast(S.name+': Spürst du den Unterschied?');return;}
     const [label,sec,scale]=seq[i%seq.length];i++;
+    snd(/aus/i.test(label)?'out':/halten/i.test(label)?'hold':'in');buzz(/aus/i.test(label)?[80,60,80]:80);
     $('#phase').textContent=label;const c=$('#circle');c.style.transitionDuration=sec+'s';c.style.transform='scale('+scale+')';
     $('#bcount').textContent=sec;
     for(let k=1;k<sec;k++)bTimers.push(setTimeout(()=>{if(bRun)$('#bcount').textContent=sec-k;},k*1000));
@@ -1135,8 +1550,23 @@ function startBreath(){
   step();
 }
 $('#breathBtn').onclick=()=>bRun?stopBreath():startBreath();
-function breatheNow(m,d){go('atmen');setBreath(m,d);stopBreath();setTimeout(()=>{if(!bRun)startBreath();},350);}
-$('#quickReset').onclick=()=>breatheNow('sigh',0.5);
+let aTab='breath';
+function atmenTab(t){aTab=t;$$('#atmenTab button').forEach(b=>b.classList.toggle('on',b.dataset.a===t));$('#cardBreath').style.display=t==='breath'?'':'none';$('#cardGround').style.display=t==='ground'?'':'none';$('#cardPmr').style.display=t==='ground'?'':'none';if(t==='ground'&&bRun)stopBreath();if(t==='breath'&&P)stopPlayer();}
+$('#atmenSwap').onclick=()=>atmenTab(aTab==='breath'?'ground':'breath');
+const PMR=[
+ ['Hände & Arme anspannen','Fäuste ballen, Arme fest anspannen – richtig fest!',5],
+ ['Loslassen','Hände öffnen, Arme schwer werden lassen. Spür den Unterschied.',10],
+ ['Schultern anspannen','Schultern hoch zu den Ohren ziehen und halten.',5],
+ ['Loslassen','Schultern fallen lassen und ausatmen.',10],
+ ['Gesicht anspannen','Augen zusammenkneifen, Kiefer fest aufeinander.',5],
+ ['Loslassen','Stirn glatt, Kiefer locker, Zunge entspannt.',10],
+ ['Beine anspannen','Oberschenkel fest, Zehen zu dir ziehen.',5],
+ ['Loslassen','Beine schwer und warm werden lassen.',10],
+ ['Ganzer Körper – 100 %','Alles gleichzeitig anspannen, so fest du kannst!',5],
+ ['Loslassen & atmen','Alles los. Zwei tiefe Atemzüge – ausatmen länger als einatmen.',15]];
+$('#pmrStart').onclick=()=>{gi=-1;renderGround();$('#pmrStart').style.display='none';startPlayer($('#pmrPlayer'),PMR,{onDone:()=>{logSession('pmr');toast(S.name+': Locker und bereit. Muh!');},onStop:()=>{$('#pmrStart').style.display='';}});};
+$$('#atmenTab button').forEach(b=>b.onclick=()=>atmenTab(b.dataset.a));
+function breatheNow(m,d){go('atmen');atmenTab('breath');setBreath(m,d);stopBreath();setTimeout(()=>{if(!bRun)startBreath();},350);}
 $('#go478').onclick=()=>breatheNow('f478',3);
 
 const GROUND=[
@@ -1148,8 +1578,8 @@ const GROUND=[
 let gi=-1;
 function renderGround(){
   const box=$('#ground');box.innerHTML='';
-  if(gi<0){const b=document.createElement('button');b.className='btn';b.textContent='Übung beginnen';b.onclick=()=>{gi=0;renderGround();};box.appendChild(b);return;}
-  if(gi>=GROUND.length){box.innerHTML='<p class="ground"><b>Du bist hier. Jetzt. Bereit für den nächsten Moment.</b></p><p class="sub"></p>';box.querySelector('.sub').textContent=S.name+': Wie fühlt es sich jetzt an – auch nur ein kleines bisschen anders?';const r=document.createElement('div');r.className='row';const a=document.createElement('button');a.className='btn soft';a.textContent='Nochmal';a.onclick=()=>{gi=0;renderGround();};const b=document.createElement('button');b.className='btn ghost';b.textContent='Zu den Techniken';b.onclick=()=>go('spiel');r.append(a,b);box.appendChild(r);return;}
+  if(gi<0){const b=document.createElement('button');b.className='btn';b.textContent='Übung beginnen';b.onclick=()=>{stopPlayer();gi=0;renderGround();};box.appendChild(b);return;}
+  if(gi>=GROUND.length){box.innerHTML='<p class="ground"><b>Du bist hier. Jetzt. Bereit für den nächsten Moment.</b></p><p class="sub"></p>';box.querySelector('.sub').textContent=S.name+': Wie fühlt es sich jetzt an – auch nur ein kleines bisschen anders?';const r=document.createElement('div');r.className='row';const a=document.createElement('button');a.className='btn soft';a.textContent='Nochmal';a.onclick=()=>{stopPlayer();gi=0;renderGround();};r.append(a);box.appendChild(r);return;}
   const g=GROUND[gi];
   box.innerHTML='<div class="progress"><i></i></div><div class="ground"><span class="big"></span> <b></b><p class="sub" style="margin-top:6px"></p></div>';
   box.querySelector('i').style.width=((gi+1)/GROUND.length*100)+'%';
@@ -1158,12 +1588,12 @@ function renderGround(){
 }
 
 /* ---------- settings ---------- */
-$('#openSettings').onclick=()=>{$('#nameIn').value=S.name;$('#userIn').value=S.user;$('#settings').classList.add('on');};
+$('#openSettings').onclick=()=>{$('#nameIn').value=S.name;$('#settings').classList.add('on');};
 $('#closeSettings').onclick=()=>$('#settings').classList.remove('on');
 $('#settings').onclick=e=>{if(e.target.id==='settings')$('#settings').classList.remove('on');};
-$('#saveSettings').onclick=()=>{S.name=$('#nameIn').value.trim()||'Mummi';S.user=$('#userIn').value.trim();save();renderAll();$('#settings').classList.remove('on');toast('Gespeichert.');};
-function askReset(){const a=$('#resetArea');a.innerHTML='<p class="sub">Check-ins, Ziele, Matchplan, Tagebuch und Einheiten werden gelöscht.</p><div class="row"><button class="btn red" id="resetYes">Ja, alles löschen</button><button class="btn ghost" id="resetNo">Abbrechen</button></div>';
-  $('#resetYes').onclick=()=>{const n=S.name;S=defaults();S.name=n;save();renderSport();renderAll();$('#settings').classList.remove('on');toast('Alles gelöscht.');resetArea();};
+$('#saveSettings').onclick=()=>{S.name=$('#nameIn').value.trim()||'Mummi';save();renderAll();$('#settings').classList.remove('on');toast('Gespeichert.');};
+function askReset(){const a=$('#resetArea');a.innerHTML='<p class="sub">Check-ins, Ziele, Wettkampfplan, Tagebuch und Einheiten werden gelöscht.</p><div class="row"><button class="btn red" id="resetYes">Ja, alles löschen</button><button class="btn ghost" id="resetNo">Abbrechen</button></div>';
+  $('#resetYes').onclick=()=>{const n=S.name,k=S.sport;S=bindPer(defaults());S.name=n;S.sport=k;save();renderSport();renderAll();$('#settings').classList.remove('on');toast('Alles gelöscht.');resetArea();};
   $('#resetNo').onclick=resetArea;}
 function resetArea(){$('#resetArea').innerHTML='<button class="del">Alle meine Daten löschen</button>';$('#resetArea .del').onclick=askReset;}
 resetArea();
@@ -1187,6 +1617,21 @@ $$('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
 
 function renderAll(){renderHeader();renderMoods();renderStats();renderGoals();renderMP();renderPicks();renderCountdown();renderJournal();renderSpiel();renderGround();}
 renderSport();renderAll();show();
+/* ---------- Startbildschirm: Sportart wählen ---------- */
+function renderStart(){
+  $('#stCow').src=$('.avatar').src;
+  const g=$('#stGrid');g.innerHTML='';
+  SPORTS.forEach(([k,l],i)=>{const b=document.createElement('button');b.type='button';b.className='st-tile';b.style.animationDelay=(0.05*i+0.15)+'s';
+    b.innerHTML=ICON('sp-'+k)+'<span></span>';b.querySelector('span').textContent=l;b.onclick=()=>chooseSport(k);g.appendChild(b);});
+}
+function chooseSport(k){
+  S.sport=k;save();stopPlayer();if($('#mpFold'))$('#mpFold').open=false;
+  dailyNow=Math.random()<0.5?bagPick('dsp-'+k,SPDAILY[k]||DAILY):bagPick('daily',DAILY);
+  renderSport();renderAll();go('heute');
+  const st=$('#start');st.classList.add('out');setTimeout(()=>{st.classList.remove('on','out');},450);
+}
+renderStart();
+
 initDB();
 })();
 </script>
